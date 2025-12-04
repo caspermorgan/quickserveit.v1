@@ -1,1 +1,603 @@
 
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuickServe IT - Your Personal Tech Partner. Premium digital services for rural India: Professional typing, video editing, school documents, creator services & custom digital work. Quality first, fair pricing, fast delivery.">
+    <meta name="keywords" content="digital services India, typing services, video editing, school documents, rural digital services, professional typing, document formatting, QuickServe IT">
+    <meta name="author" content="QuickServe IT">
+    <meta property="og:title" content="QuickServe IT - Your Personal Tech Partner">
+    <meta property="og:description" content="Premium digital services for rural India. Professional quality, fair pricing, fast delivery.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#D4AF37">
+    <title>QuickServe IT - Your Personal Tech Partner | Premium Digital Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Premium Particle Animation Canvas -->
+    <canvas id="particle-canvas" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;" aria-hidden="true"></canvas>
+
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">
+                <svg class="logo-icon" viewBox="0 0 100 100" fill="none">
+                    <path d="M50 5L90 28.75V71.25L50 95L10 71.25V28.75L50 5Z" stroke="#D4AF37" stroke-width="3" fill="rgba(212,175,55,0.1)" />
+                    <path d="M50 20L75 35V65L50 80L25 65V35L50 20Z" stroke="#C79A1B" stroke-width="2" fill="rgba(199,154,27,0.2)" />
+                    <circle cx="50" cy="50" r="12" fill="#D4AF37" />
+                </svg>
+                <span class="logo-text">QuickServe IT</span>
+            </a>
+
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><span data-en="Services" data-hi="सेवाएं">Services</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#typing-services" class="dropdown-link"><span data-en="Typing &amp; Document" data-hi="टाइपिंग और दस्तावेज़">Typing &amp; Document</span></a>
+                            <a href="#school-services" class="dropdown-link"><span data-en="School &amp; Institute" data-hi="स्कूल और संस्थान">School &amp; Institute</span></a>
+                            <a href="#creator-services" class="dropdown-link"><span data-en="Creator Services" data-hi="निर्माता सेवाएं">Creator Services</span></a>
+                            <a href="#custom-services" class="dropdown-link"><span data-en="Custom Work" data-hi="कस्टम डिजिटल काम">Custom Work</span></a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#pricing" class="nav-link"><span data-en="Pricing" data-hi="मूल्य निर्धारण">Pricing</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#pricing" class="dropdown-link"><span data-en="Pricing Overview" data-hi="मूल्य निर्धारण अवलोकन">Pricing Overview</span></a>
+                            <a href="#pricing" class="dropdown-link"><span data-en="Service Rates" data-hi="सेवा दरें">Service Rates</span></a>
+                            <a href="#pricing" class="dropdown-link"><span data-en="Bulk &amp; Deals" data-hi="बल्क और कस्टम">Bulk &amp; Deals</span></a>
+                            <a href="#contact" class="dropdown-link"><span data-en="Get Custom Quote" data-hi="कस्टम उद्धरण प्राप्त करें">Get Custom Quote</span></a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><span data-en="Portfolio" data-hi="पोर्टफोलियो">Portfolio</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#portfolio" class="dropdown-link"><span data-en="Video Work" data-hi="वीडियो काम">Video Work</span></a>
+                            <a href="#portfolio" class="dropdown-link"><span data-en="Typing Samples" data-hi="टाइपिंग नमूने">Typing Samples</span></a>
+                            <a href="#portfolio" class="dropdown-link"><span data-en="School Documents" data-hi="स्कूल दस्तावेज़">School Documents</span></a>
+                            <a href="#portfolio" class="dropdown-link"><span data-en="Before &amp; After" data-hi="पहले और बाद में">Before &amp; After</span></a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><span data-en="About" data-hi="हमारे बारे में">About</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#about" class="dropdown-link"><span data-en="Founder Story" data-hi="संस्थापक की कहानी">Founder Story</span></a>
+                            <a href="#about" class="dropdown-link"><span data-en="Team" data-hi="टीम">Team</span></a>
+                            <a href="#about" class="dropdown-link"><span data-en="Vision &amp; Mission" data-hi="दृष्टि और मिशन">Vision &amp; Mission</span></a>
+                            <a href="#about" class="dropdown-link"><span data-en="Why Different" data-hi="क्यों अलग हैं">Why Different</span></a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><span data-en="More" data-hi="अधिक">More</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#blog" class="dropdown-link"><span data-en="Blog" data-hi="ब्लॉग">Blog</span></a>
+                            <a href="#faq" class="dropdown-link"><span data-en="FAQ" data-hi="सामान्य प्रश्न">FAQ</span></a>
+                            <a href="#refer" class="dropdown-link"><span data-en="Refer &amp; Earn" data-hi="संदर्भ और कमाएं">Refer &amp; Earn</span></a>
+                            <a href="#legal" class="dropdown-link"><span data-en="Legal" data-hi="कानूनी">Legal</span></a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="status-chip" id="statusChip">
+                    <span class="status-dot"></span>
+                    <span id="statusText" data-en="Online" data-hi="ऑनलाइन">Online</span>
+                </div>
+
+                <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                <a href="#contact" class="cta-button"><span data-en="Get Started" data-hi="शुरू करें">Get Started</span></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- === Final Centered Homepage Hero Section === -->
+    <section class="hero-centered">
+        <div class="hero-content">
+            <!-- Greeting (above title) -->
+            <p class="greeting-text" id="greeting">Good morning! Let's elevate your digital presence</p>
+            <!-- Main Title -->
+            <h1 class="main-title">QuickServe IT</h1>
+            <!-- Tagline (italic) -->
+            <p class="tagline-italic">Your Personal Tech Partner</p>
+            <!-- 3-line paragraph -->
+            <p class="hero-paragraph">
+                At QuickServe IT, we understand the challenges of managing digital work efficiently.
+                Whether you're an educator, business owner, or content creator, we deliver
+                professional solutions with transparency, reliability, and your success as our top priority.
+            </p>
+            <!-- Our Service + Typewriter -->
+            <div class="service-typewriter">
+                <p class="service-label">Our Service <span id="typewriter" class="typewriter-text"></span></p>
+            </div>
+            <!-- CTA Buttons -->
+            <div class="cta-buttons">
+                <a href="#get-in-touch" class="btn btn-primary">Get Started</a>
+                <button onclick="document.querySelector('#why-choose').scrollIntoView({behavior: 'smooth'})" class="btn btn-ghost">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    <!-- END HERO-->
+    <!-- old hero section removed for final version -->
+
+
+    <section id="services" class="reveal">
+        <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Professional digital solutions tailored to your needs</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card reveal" id="typing-services">
+                <div class="service-icon"><i class="fas fa-keyboard"></i></div>
+                <h3>Typing &amp; Document Services</h3>
+                <p>Professional typing, formatting, PDF conversion, and bulk document work with 99% accuracy.</p>
+            </div>
+            <div class="service-card reveal" id="school-services">
+                <div class="service-icon"><i class="fas fa-school"></i></div>
+                <h3>School &amp; Institute Services</h3>
+                <p>Timetables, attendance sheets, exam papers, certificates, and complete school data management.</p>
+            </div>
+            <div class="service-card reveal" id="creator-services">
+                <div class="service-icon"><i class="fas fa-video"></i></div>
+                <h3>Creator Services</h3>
+                <p>Video editing, audio cleanup, script writing, repurposing content for educational creators.</p>
+            </div>
+            <div class="service-card reveal" id="custom-services">
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h3>Custom Digital Work</h3>
+                <p>Special projects, custom formatting, unique digital solutions tailored to your requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="way-of-working reveal">
+        <div class="section-header">
+            <h2 class="section-title">Our Way of Working</h2>
+            <p class="section-subtitle">What makes Quickserve IT different from ordinary cyber cafés</p>
+        </div>
+        <div class="way-content">
+            <p>We don't just type words or edit videos. We understand context, purpose, and quality. Every project goes through our systematic workflow to ensure professional output.</p>
+            <p>Our approach combines technical expertise with genuine care for your success. We believe rural India deserves the same digital quality standards as metropolitan cities.</p>
+        </div>
+    </section>
+
+    <section class="steps-section reveal">
+        <div class="section-header">
+            <h2 class="section-title">How We Collect Data &amp; Deliver</h2>
+            <p class="section-subtitle">Our 5-step transparent process</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card reveal">
+                <div class="step-number">1</div>
+                <h3>Client Submission</h3>
+                <p>You submit your files, requirements, and deadlines through WhatsApp, email, or contact form.</p>
+            </div>
+            <div class="step-card reveal">
+                <div class="step-number">2</div>
+                <h3>Analysis &amp; Planning</h3>
+                <p>We analyze your project, clarify requirements, and provide transparent pricing and timeline.</p>
+            </div>
+            <div class="step-card reveal">
+                <div class="step-number">3</div>
+                <h3>Execution with Quality Checks</h3>
+                <p>Our team works on your project with multiple quality checkpoints and accuracy verification.</p>
+            </div>
+            <div class="step-card reveal">
+                <div class="step-number">4</div>
+                <h3>Client Review</h3>
+                <p>You review the output. We make revisions if needed to ensure complete satisfaction.</p>
+            </div>
+            <div class="step-card reveal">
+                <div class="step-number">5</div>
+                <h3>Final Delivery</h3>
+                <p>After approval and final payment, we deliver your completed project in the required format.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose" class="reveal">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Why Choose Quickserve IT?" data-hi="Quickserve IT क्यों चुनें?">Why Choose Quickserve IT?</h2>
+            <p class="section-subtitle" data-en="We don't just type or edit — we understand your needs and deliver results that matter." data-hi="हम सिर्फ टाइप या संपादन नहीं करते — हम आपकी ज़रूरतों को समझते हैं और परिणाम देते हैं जो मायने रखते हैं।">We don't just type or edit — we understand your needs and deliver results that matter.</p>
+        </div>
+
+        <div class="advantages-grid">
+            <div class="advantage-card reveal">
+                <div class="advantage-icon"><i class="fas fa-check-circle"></i></div>
+                <h3 data-en="Professional Quality" data-hi="पेशेवर गुणवत्ता">Professional Quality</h3>
+                <p data-en="Expert team with proven track record, meticulous attention to every detail, consistently excellent results" data-hi="सिद्ध ट्रैक रिकॉर्ड के साथ विशेषज्ञ टीम, हर विवरण पर सावधानीपूर्वक ध्यान, लगातार उत्कृष्ट परिणाम">Expert team with proven track record, meticulous attention to every detail, consistently excellent results</p>
+            </div>
+            <div class="advantage-card reveal">
+                <div class="advantage-icon"><i class="fas fa-bolt"></i></div>
+                <h3 data-en="Fast &amp; Reliable" data-hi="तेज़ और विश्वसनीय">Fast &amp; Reliable</h3>
+                <p data-en="Quick turnaround without compromising quality, dependable service you can count on, timely delivery, always" data-hi="गुणवत्ता से समझौता किए बिना त्वरित टर्नअराउंड, विश्वसनीय सेवा जिस पर आप भरोसा कर सकते हैं, समय पर डिलीवरी, हमेशा">Quick turnaround without compromising quality, dependable service you can count on, timely delivery, always</p>
+            </div>
+            <div class="advantage-card reveal">
+                <div class="advantage-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3 data-en="100% Transparent" data-hi="100% पारदर्शी">100% Transparent</h3>
+                <p data-en="Clear, honest pricing from the start, no hidden fees or surprises, open communication throughout" data-hi="शुरुआत से स्पष्ट, ईमानदार मूल्य निर्धारण, कोई छिपी फीस या आश्चर्य नहीं, पूरे समय खुला संचार">Clear, honest pricing from the start, no hidden fees or surprises, open communication throughout</p>
+            </div>
+            <div class="advantage-card reveal">
+                <div class="advantage-icon"><i class="fas fa-handshake"></i></div>
+                <h3 data-en="Local &amp; Trusted" data-hi="स्थानीय और विश्वसनीय">Local &amp; Trusted</h3>
+                <p data-en="Community-focused approach, personal touch in every interaction, supporting your local success" data-hi="समुदाय-केंद्रित दृष्टिकोण, हर बातचीत में व्यक्तिगत स्पर्श, आपकी स्थानीय सफलता का समर्थन">Community-focused approach, personal touch in every interaction, supporting your local success</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="comparison-section reveal">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Cyber Café vs Quickserve IT" data-hi="साइबर कैफे बनाम Quickserve IT">Cyber Café vs Quickserve IT</h2>
+        </div>
+
+        <div class="comparison-table">
+            <div class="table-header">
+                <div class="table-cell" data-en="Feature" data-hi="विशेषता">Feature</div>
+                <div class="table-cell" data-en="Cyber Café" data-hi="साइबर कैफे">Cyber Café</div>
+                <div class="table-cell">Quickserve IT</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell" data-en="Professional Formatting" data-hi="पेशेवर फॉर्मेटिंग">Professional Formatting</div>
+                <div class="table-cell">❌ <span data-en="Basic Only" data-hi="केवल बुनियादी">Basic Only</span></div>
+                <div class="table-cell">✔ <span data-en="Premium" data-hi="प्रीमियम">Premium</span></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell" data-en="Accuracy &amp; Verification" data-hi="सटीकता और सत्यापन">Accuracy &amp; Verification</div>
+                <div class="table-cell">❌ <span data-en="Random" data-hi="यादृच्छिक">Random</span></div>
+                <div class="table-cell">✔ <span data-en="99% Guaranteed" data-hi="99% गारंटीड">99% Guaranteed</span></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell" data-en="Delivery Speed" data-hi="डिलीवरी की गति">Delivery Speed</div>
+                <div class="table-cell">❌ <span data-en="Slow" data-hi="धीमा">Slow</span></div>
+                <div class="table-cell">✔ <span data-en="Fast" data-hi="तेज़">Fast</span></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell" data-en="File Management" data-hi="फ़ाइल प्रबंधन">File Management</div>
+                <div class="table-cell">❌ <span data-en="Disorganized" data-hi="अव्यवस्थित">Disorganized</span></div>
+                <div class="table-cell">✔ <span data-en="Organized" data-hi="संगठित">Organized</span></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell" data-en="School Expertise" data-hi="स्कूल विशेषज्ञता">School Expertise</div>
+                <div class="table-cell">❌ <span data-en="No Knowledge" data-hi="कोई ज्ञान नहीं">No Knowledge</span></div>
+                <div class="table-cell">✔ <span data-en="Expert Level" data-hi="विशेषज्ञ स्तर">Expert Level</span></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell" data-en="Creative Editing" data-hi="रचनात्मक संपादन">Creative Editing</div>
+                <div class="table-cell">❌ <span data-en="Not Available" data-hi="उपलब्ध नहीं">Not Available</span></div>
+                <div class="table-cell">✔ <span data-en="Professional" data-hi="पेशेवर">Professional</span></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell" data-en="Customer Support" data-hi="ग्राहक सहायता">Customer Support</div>
+                <div class="table-cell">❌ <span data-en="No Follow-up" data-hi="कोई फॉलो-अप नहीं">No Follow-up</span></div>
+                <div class="table-cell">✔ <span data-en="Dedicated" data-hi="समर्पित">Dedicated</span></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell" data-en="Pricing" data-hi="मूल्य निर्धारण">Pricing</div>
+                <div class="table-cell">❌ <span data-en="Hidden Costs" data-hi="छिपी लागतें">Hidden Costs</span></div>
+                <div class="table-cell">✔ <span data-en="Transparent" data-hi="पारदर्शी">Transparent</span></div>
+            </div>
+        </div>
+
+        <p class="comparison-message" data-en="There is a BIG difference between typing and professional digital services." data-hi="टाइपिंग और पेशेवर डिजिटल सेवाओं के बीच एक बड़ा अंतर है।">&quot;There is a BIG difference between typing and professional digital services.&quot;</p>
+    </section>
+
+    <section class="why-matters reveal">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Why This Matters" data-hi="यह क्यों मायने रखता है">Why This Matters</h2>
+        </div>
+
+        <ul class="points-list">
+            <li data-en="Professional work reflects positively on your organization and builds credibility with your audience" data-hi="पेशेवर काम आपके संगठन पर सकारात्मक रूप से प्रतिबिंबित होता है और आपके दर्शकों के साथ विश्वसनीयता बनाता है">Professional work reflects positively on your organization and builds credibility with your audience</li>
+            <li data-en="Students benefit greatly when materials are well-organized, clear, and professionally presented" data-hi="जब सामग्री अच्छी तरह से संगठित, स्पष्ट और पेशेवर रूप से प्रस्तुत की जाती है तो छात्रों को बहुत लाभ होता है">Students benefit greatly when materials are well-organized, clear, and professionally presented</li>
+            <li data-en="Educators save valuable time with streamlined processes, allowing focus on what matters most" data-hi="शिक्षक सुव्यवस्थित प्रक्रियाओं के साथ मूल्यवान समय बचाते हैं, जो सबसे महत्वपूर्ण है उस पर ध्यान केंद्रित करने की अनुमति देते हैं">Educators save valuable time with streamlined processes, allowing focus on what matters most</li>
+            <li data-en="Content creators reach wider audiences when their work maintains consistent, professional quality" data-hi="जब उनका काम लगातार, पेशेवर गुणवत्ता बनाए रखता है तो सामग्री निर्माता व्यापक दर्शकों तक पहुंचते हैं">Content creators reach wider audiences when their work maintains consistent, professional quality</li>
+            <li data-en="Schools operate more smoothly when administrative tasks are handled efficiently and accurately" data-hi="जब प्रशासनिक कार्यों को कुशलता और सटीकता से संभाला जाता है तो स्कूल अधिक सुचारू रूप से संचालित होते हैं">Schools operate more smoothly when administrative tasks are handled efficiently and accurately</li>
+            <li data-en="Businesses make stronger impressions when all communications and materials are polished and professional" data-hi="जब सभी संचार और सामग्री पॉलिश और पेशेवर होती हैं तो व्यवसाय मजबूत प्रभाव डालते हैं">Businesses make stronger impressions when all communications and materials are polished and professional</li>
+            <li data-en="Quality work creates lasting positive impressions that influence client decisions and loyalty" data-hi="गुणवत्ता का काम स्थायी सकारात्मक प्रभाव बनाता है जो ग्राहक निर्णयों और वफादारी को प्रभावित करता है">Quality work creates lasting positive impressions that influence client decisions and loyalty</li>
+            <li data-en="Professional standards elevate your brand perception in the eyes of students, clients, and partners" data-hi="पेशेवर मानक छात्रों, ग्राहकों और भागीदारों की नजर में आपकी ब्रांड धारणा को ऊंचा करते हैं">Professional standards elevate your brand perception in the eyes of students, clients, and partners</li>
+            <li data-en="Digital excellence opens doors to new opportunities and helps you stand out from competition" data-hi="डिजिटल उत्कृष्टता नए अवसरों के द्वार खोलती है और आपको प्रतिस्पर्धा से अलग खड़े होने में मदद करती है">Digital excellence opens doors to new opportunities and helps you stand out from competition</li>
+            <li data-en="Investing in quality digital work delivers long-term benefits that far exceed the initial investment" data-hi="गुणवत्ता डिजिटल काम में निवेश दीर्घकालिक लाभ देता है जो प्रारंभिक निवेश से कहीं अधिक है">Investing in quality digital work delivers long-term benefits that far exceed the initial investment</li>
+        </ul>
+    </section>
+
+    <section id="services" class="reveal">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Our Comprehensive Services" data-hi="हमारी व्यापक सेवाएं">Our Comprehensive Services</h2>
+            <p class="section-subtitle" data-en="We provide professional digital solutions tailored to your specific needs. Each service is delivered with meticulous attention to quality and detail." data-hi="हम आपकी विशिष्ट आवश्यकताओं के अनुरूप पेशेवर डिजिटल समाधान प्रदान करते हैं। प्रत्येक सेवा गुणवत्ता और विस्तार पर सावधानीपूर्वक ध्यान के साथ प्रदान की जाती है।">We provide professional digital solutions tailored to your specific needs. Each service is delivered with meticulous attention to quality and detail.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card reveal" id="typing-services">
+                <div class="service-icon"><i class="fas fa-keyboard"></i></div>
+                <h3 data-en="Typing &amp; Document Services" data-hi="टाइपिंग और दस्तावेज़ सेवाएं">Typing &amp; Document Services</h3>
+                <p data-en="Professional typing in English and Hindi, document formatting and enhancement, PDF cleanup and professional presentation" data-hi="अंग्रेजी और हिंदी में पेशेवर टाइपिंग, दस्तावेज़ स्वरूपण और वृद्धि, पीडीएफ क्लीनअप और पेशेवर प्रस्तुति">Professional typing in English and Hindi, document formatting and enhancement, PDF cleanup and professional presentation</p>
+            </div>
+            <div class="service-card reveal" id="school-services">
+                <div class="service-icon"><i class="fas fa-school"></i></div>
+                <h3 data-en="School &amp; Institute Services" data-hi="स्कूल और संस्थान सेवाएं">School &amp; Institute Services</h3>
+                <p data-en="Timetable creation and management, attendance sheets and certificates, academic document preparation" data-hi="समय सारणी निर्माण और प्रबंधन, उपस्थिति पत्रक और प्रमाण पत्र, शैक्षणिक दस्तावेज़ तैयारी">Timetable creation and management, attendance sheets and certificates, academic document preparation</p>
+            </div>
+            <div class="service-card reveal" id="creator-services">
+                <div class="service-icon"><i class="fas fa-video"></i></div>
+                <h3 data-en="Creator Services" data-hi="निर्माता सेवाएं">Creator Services</h3>
+                <p data-en="Professional video editing, content optimization for social media, audio quality enhancement" data-hi="पेशेवर वीडियो संपादन, सोशल मीडिया के लिए सामग्री अनुकूलन, ऑडियो गुणवत्ता वृद्धि">Professional video editing, content optimization for social media, audio quality enhancement</p>
+            </div>
+            <div class="service-card reveal" id="custom-services">
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h3 data-en="Custom Digital Work" data-hi="कस्टम डिजिटल काम">Custom Digital Work</h3>
+                <p data-en="Specialized projects tailored to your needs, bulk order management, custom solutions for unique requirements" data-hi="आपकी आवश्यकताओं के अनुरूप विशेष परियोजनाएं, बल्क ऑर्डर प्रबंधन, अद्वितीय आवश्यकताओं के लिए कस्टम समाधान">Specialized projects tailored to your needs, bulk order management, custom solutions for unique requirements</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <div class="section-header">
+            <h2 class="section-title" data-en="What Our Clients Say" data-hi="हमारे ग्राहक क्या कहते हैं">What Our Clients Say</h2>
+            <p class="section-subtitle" data-en="Real feedback from real people we've helped" data-hi="वास्तविक लोगों से वास्तविक प्रतिक्रिया जिनकी हमने मदद की है">Real feedback from real people we've helped</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card reveal">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">RS</div>
+                    <div class="testimonial-info">
+                        <h4>Radhika Singh</h4>
+                        <p data-en="School Principal, Varanasi" data-hi="स्कूल प्रिंसिपल, वाराणसी">School Principal, Varanasi</p>
+                    </div>
+                </div>
+                <p class="testimonial-text" data-en="Quickserve IT completely transformed how our school manages documents. Exam papers are now formatted professionally, student records are organized, and everything just works." data-hi="Quickserve IT ने हमारे स्कूल के दस्तावेज़ प्रबंधन को पूरी तरह से बदल दिया। परीक्षा पत्र अब पेशेवर रूप से प्रारूपित हैं, छात्र रिकॉर्ड संगठित हैं, और सब कुछ बस काम करता है।">&quot;Quickserve IT completely transformed how our school manages documents. Exam papers are now formatted professionally, student records are organized, and everything just works.&quot;</p>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-card reveal">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">AK</div>
+                    <div class="testimonial-info">
+                        <h4>Arjun Kumar</h4>
+                        <p data-en="Educational Content Creator" data-hi="शैक्षिक सामग्री निर्माता">Educational Content Creator</p>
+                    </div>
+                </div>
+                <p class="testimonial-text" data-en="My YouTube channel grew 10x faster after using Quickserve IT's video editing service. The quality is professional, and they understand educational content perfectly." data-hi="Quickserve IT की वीडियो संपादन सेवा का उपयोग करने के बाद मेरा YouTube चैनल 10 गुना तेजी से बढ़ा। गुणवत्ता पेशेवर है, और वे शैक्षिक सामग्री को पूरी तरह से समझते हैं।">&quot;My YouTube channel grew 10x faster after using Quickserve IT's video editing service. The quality is professional, and they understand educational content perfectly.&quot;</p>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-card reveal">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">PM</div>
+                    <div class="testimonial-info">
+                        <h4>Priya Mishra</h4>
+                        <p data-en="Teacher &amp; Coordinator" data-hi="शिक्षक और समन्वयक">Teacher &amp; Coordinator</p>
+                    </div>
+                </div>
+                <p class="testimonial-text" data-en="I save hours every month because of Quickserve IT. They're my digital support team. Fair pricing, zero stress, always reliable." data-hi="Quickserve IT की वजह से मैं हर महीने घंटों की बचत करती हूं। वे मेरी डिजिटल सहायता टीम हैं। उचित मूल्य निर्धारण, शून्य तनाव, हमेशा विश्वसनीय।">&quot;I save hours every month because of Quickserve IT. They're my digital support team. Fair pricing, zero stress, always reliable.&quot;</p>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="reveal">
+        <div class="pricing-notice">
+            <h3 data-en="✨ Our Transparent Pricing" data-hi="✨ हमारी पारदर्शी मूल्य निर्धारण">✨ Our Transparent Pricing</h3>
+            <ul class="pricing-list">
+                <li><strong data-en="English Typing:" data-hi="अंग्रेजी टाइपिंग:">English Typing:</strong> <span>₹15/page</span></li>
+                <li><strong data-en="Hindi Typing:" data-hi="हिंदी टाइपिंग:">Hindi Typing:</strong> <span>₹20/page</span></li>
+                <li><strong data-en="Printing:" data-hi="प्रिंटिंग:">Printing:</strong> <span data-en="₹2/page (single) | Bulk: Contact &amp; Deal" data-hi="₹2/पृष्ठ (एकल) | बल्क: संपर्क करें">₹2/page (single) | Bulk: Contact &amp; Deal</span></li>
+                <li><strong data-en="Bulk Work:" data-hi="बल्क काम:">Bulk Work:</strong> <span data-en="Contact for deals" data-hi="डील के लिए संपर्क करें">Contact for deals</span></li>
+            </ul>
+            <p class="rural-promise" data-en="We serve rural India with the same quality standards as metropolitan services." data-hi="हम ग्रामीण भारत को महानगरीय सेवाओं के समान गुणवत्ता मानकों के साथ सेवा प्रदान करते हैं।">We serve rural India with the same quality standards as metropolitan services.</p>
+            <p style="text-align: center; margin-top: 16px; color: var(--text-muted); font-size: 14px;" data-en="50% advance required, remaining before final delivery" data-hi="50% अग्रिम आवश्यक, शेष अंतिम डिलीवरी से पहले">50% advance required, remaining before final delivery</p>
+        </div>
+    </section>
+
+    <section id="refer" class="refer-section reveal">
+        <h2 class="section-title" data-en="Refer &amp; Earn" data-hi="संदर्भ और कमाएं">Refer &amp; Earn</h2>
+        <p style="font-size: 18px; color: var(--text-muted); margin-top: 16px; line-height: 1.7;" data-en="Share Quickserve IT with a friend. When they complete a project above ₹6,000, you both get rewards on your next order." data-hi="किसी मित्र के साथ Quickserve IT शेयर करें। जब वे ₹6,000 से ऊपर की परियोजना पूरी करते हैं, तो आप दोनों को अपने अगले ऑर्डर पर पुरस्कार मिलते हैं।">Share Quickserve IT with a friend. When they complete a project above ₹6,000, you both get rewards on your next order.</p>
+        <div class="refer-amount">₹500</div>
+        <p style="font-size: 16px; color: var(--gold-bright); margin-top: 24px; font-weight: 600;" data-en="Commission per successful referral" data-hi="सफल संदर्भ प्रति कमीशन">Commission per successful referral</p>
+    </section>
+
+    <section id="get-in-touch" class="contact-section reveal">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Get In Touch" data-hi="संपर्क करें">Get In Touch</h2>
+            <p class="section-subtitle" data-en="Fill out the form and we'll respond within 24 hours." data-hi="फॉर्म भरें और हम 24 घंटे के भीतर जवाब देंगे।">Fill out the form and we'll respond within 24 hours.</p>
+        </div>
+
+        <div class="contact-combined-box">
+            <!-- LEFT SIDE: FORM -->
+            <div class="contact-form-side">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label class="form-label" data-en="Your Full Name *" data-hi="आपका पूरा नाम *">Your Full Name *</label>
+                        <input type="text" name="name" class="form-control" data-placeholder-en="Enter your name" data-placeholder-hi="अपना नाम दर्ज करें" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-en="Mobile Number *" data-hi="मोबाइल नंबर *">Mobile Number *</label>
+                        <input type="tel" name="mobile" class="form-control" placeholder="+91 xxxxxxxxxx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-en="Email Address *" data-hi="ईमेल पता *">Email Address *</label>
+                        <input type="email" name="email" class="form-control" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-en="Service Type *" data-hi="सेवा का प्रकार *">Service Type *</label>
+                        <select name="service" class="form-control" required id="serviceSelect">
+                            <option value="" data-en="Select service..." data-hi="सेवा चुनें...">Select service...</option>
+                            <option value="Typing Work (English)" data-en="Typing Work (English)" data-hi="टाइपिंग काम (अंग्रेजी)">Typing Work (English)</option>
+                            <option value="Typing Work (Hindi)" data-en="Typing Work (Hindi)" data-hi="टाइपिंग काम (हिंदी)">Typing Work (Hindi)</option>
+                            <option value="Document Formatting" data-en="Document Formatting" data-hi="दस्तावेज़ फॉर्मेटिंग">Document Formatting</option>
+                            <option value="PDF Cleanup" data-en="PDF Cleanup" data-hi="PDF साफ़ करना">PDF Cleanup</option>
+                            <option value="Certificate Formatting" data-en="Certificate Formatting" data-hi="प्रमाणपत्र फॉर्मेटिंग">Certificate Formatting</option>
+                            <option value="Exam Paper Typing" data-en="Exam Paper Typing" data-hi="परीक्षा पत्र टाइपिंग">Exam Paper Typing</option>
+                            <option value="Timetable Creation" data-en="Timetable Creation" data-hi="समय सारणी निर्माण">Timetable Creation</option>
+                            <option value="Attendance Sheets" data-en="Attendance Sheets" data-hi="उपस्थिति पत्र">Attendance Sheets</option>
+                            <option value="School Services (Other)" data-en="School Services (Other)" data-hi="स्कूल सेवाएं (अन्य)">School Services (Other)</option>
+                            <option value="Video Editing" data-en="Video Editing" data-hi="वीडियो संपादन">Video Editing</option>
+                            <option value="Script Writing" data-en="Script Writing" data-hi="स्क्रिप्ट लेखन">Script Writing</option>
+                            <option value="Audio Cleanup" data-en="Audio Cleanup" data-hi="ऑडियो साफ़ करना">Audio Cleanup</option>
+                            <option value="Creator Services (Other)" data-en="Creator Services (Other)" data-hi="निर्माता सेवाएं (अन्य)">Creator Services (Other)</option>
+                            <option value="Custom Digital Work" data-en="Custom Digital Work" data-hi="कस्टम डिजिटल काम">Custom Digital Work</option>
+                            <option value="Other / Special Project" data-en="Other / Special Project" data-hi="अन्य / विशेष परियोजना">Other / Special Project</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-en="Project Details" data-hi="परियोजना विवरण">Project Details</label>
+                        <textarea name="message" class="form-control" rows="5" data-placeholder-en="Tell us about your project, requirements, and deadlines..." data-placeholder-hi="अपनी परियोजना, आवश्यकताओं और समय सीमा के बारे में बताएं..." placeholder="Tell us about your project, requirements, and deadlines..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                        <i class="fab fa-whatsapp"></i> <span data-en="Send via WhatsApp" data-hi="WhatsApp के माध्यम से भेजें">Send via WhatsApp</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- VERTICAL DIVIDER LINE -->
+            <div class="divider-line"></div>
+
+            <!-- RIGHT SIDE: CONTACT DETAILS -->
+            <div class="contact-details-side">
+                <h3 class="contact-details-heading">Reach Us</h3>
+
+                <div class="detail-item">
+                    <label class="detail-label">Email</label>
+                    <p class="detail-value">letsquickserveit@gmail.com</p>
+                    <button class="copy-btn" onclick="copyToClipboard('letsquickserveit@gmail.com')">Copy</button>
+                </div>
+
+                <div class="detail-item">
+                    <label class="detail-label">Address</label>
+                    <p class="detail-value">Gorakhpur Rural, UP, India</p>
+                    <button class="copy-btn" onclick="copyToClipboard('Gorakhpur Rural, UP, India')">Copy</button>
+                </div>
+
+                <div class="detail-item">
+                    <label class="detail-label">Hours</label>
+                    <p class="detail-value">Mon-Fri: 10AM-4PM<br>Sat: 9AM-12PM<br>Sun: Closed</p>
+                </div>
+
+                <div class="detail-item">
+                    <label class="detail-label">WhatsApp</label>
+                    <p class="detail-value">
+                        <a href="https://wa.me/916388224877" target="_blank">6388224877</a>
+                    </p>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://linkedin.com/company/quickserve-it" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/quickserveit" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/quickserveit" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://youtube.com/@quickserveit" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal contact form (hidden by default) -->
+    <div id="contact-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="contact-modal-title">
+        <div class="modal-panel">
+            <button class="modal-close" aria-label="Close contact form">&times;</button>
+            <h2 id="contact-modal-title" data-en="Get in touch" data-hi="संपर्क करें">Get in touch</h2>
+            <form id="contact-form">
+                <label class="form-label">
+                    <span data-en="Name" data-hi="नाम">Name</span>
+                    <input type="text" name="name" class="form-control" required />
+                </label>
+                <label class="form-label">
+                    <span data-en="Email" data-hi="ईमेल">Email</span>
+                    <input type="email" name="email" class="form-control" required />
+                </label>
+                <label class="form-label">
+                    <span data-en="Message" data-hi="संदेश">Message</span>
+                    <textarea name="message" class="form-control" rows="4" required></textarea>
+                </label>
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <span data-en="Send (50% advance recommended)" data-hi="भेजें (50% अग्रिम अनुशंसित)">Send (50% advance recommended)</span>
+                    </button>
+                    <button type="button" class="btn btn-secondary modal-close">
+                        <span data-en="Close" data-hi="बंद करें">Close</span>
+                    </button>
+                </div>
+            </form>
+            <p class="modal-note" data-en="We request 50% advance and 50% on final delivery. No negotiation on final payment once work is delivered." data-hi="हम 50% अग्रिम और अंतिम डिलीवरी पर 50% का अनुरोध करते हैं। काम सौंपे जाने के बाद अंतिम भुगतान पर कोई बातचीत नहीं।">We request 50% advance and 50% on final delivery. No negotiation on final payment once work is delivered.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quickserve IT</h3>
+                <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: var(--space-3);" data-en="Your Personal Tech Partner bringing professional digital services to rural India." data-hi="आपका निजी तकनीकी साथी जो ग्रामीण भारत में पेशेवर डिजिटल सेवाएं ला रहा है।">Your Personal Tech Partner bringing professional digital services to rural India.</p>
+                <div class="contact-detail">
+                    <i class="fas fa-envelope" style="color: var(--gold-bright);"></i>
+                    <a href="mailto:letsquickserveit@gmail.com">letsquickserveit@gmail.com</a>
+                    <button class="copy-btn-small" onclick="copyToClipboard('letsquickserveit@gmail.com')"><i class="fas fa-copy"></i></button>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Services" data-hi="सेवाएं">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#typing-services"><span data-en="Typing &amp; Documents" data-hi="टाइपिंग और दस्तावेज़">Typing &amp; Documents</span></a></li>
+                    <li><a href="#school-services"><span data-en="School Services" data-hi="स्कूल सेवाएं">School Services</span></a></li>
+                    <li><a href="#creator-services"><span data-en="Creator Services" data-hi="निर्माता सेवाएं">Creator Services</span></a></li>
+                    <li><a href="#custom-services"><span data-en="Custom Work" data-hi="कस्टम काम">Custom Work</span></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Quick Links" data-hi="त्वरित लिंक">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#about"><span data-en="About Us" data-hi="हमारे बारे में">About Us</span></a></li>
+                    <li><a href="#pricing"><span data-en="Pricing" data-hi="मूल्य निर्धारण">Pricing</span></a></li>
+                    <li><a href="#portfolio"><span data-en="Portfolio" data-hi="पोर्टफोलियो">Portfolio</span></a></li>
+                    <li><a href="#faq"><span data-en="FAQ" data-hi="सामान्य प्रश्न">FAQ</span></a></li>
+                    <li><a href="#refer"><span data-en="Refer &amp; Earn" data-hi="संदर्भ और कमाएं">Refer &amp; Earn</span></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-en="Connect" data-hi="जुड़ें">Connect</h3>
+                <div class="social-links" style="margin-top: var(--space-2);">
+                    <a href="https://linkedin.com/company/quickserve-it" class="social-icon" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/quickserveit" class="social-icon" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/quickserveit" class="social-icon" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/916388224877" class="social-icon" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://youtube.com/@quickserveit" class="social-icon" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Quickserve IT. <span data-en="All rights reserved." data-hi="सर्वाधिकार सुरक्षित।">All rights reserved.</span> | Gorakhpur Rural, UP, India</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
