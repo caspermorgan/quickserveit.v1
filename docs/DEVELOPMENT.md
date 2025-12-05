@@ -1,74 +1,73 @@
-# QuickServe IT — Developer Guidelines
+# QuickServe IT – Development Guide
 
-This document provides guidelines for contributing to the QuickServe IT website project, maintaining code quality, and ensuring consistency with the brand identity.
+## Philosophy
 
----
+- Static, fast, and reliable.
+- Beautiful and usable on low-end Android phones.
+- Premium luxury studio feel.
+- Always supports English + Hindi for main content.
 
-## Table of Contents
+## Tech Stack
 
-- [Design Philosophy](#design-philosophy)
-- [Code Standards](#code-standards)
-- [File Structure & Naming](#file-structure--naming)
-- [HTML Guidelines](#html-guidelines)
-- [CSS Guidelines](#css-guidelines)
-- [JavaScript Guidelines](#javascript-guidelines)
-- [Testing Checklist](#testing-checklist)
-- [Performance Rules](#performance-rules)
-- [Accessibility](#accessibility)
+- HTML5
+- CSS3 with variables (`src/styles/variables.css`)
+- Vanilla JavaScript (`src/scripts/*.js`)
+- Optional: simple static server (e.g. `npx serve .`)
 
----
+## Folder Overview
 
-## Design Philosophy
+- `src/pages/` – Home, About, Services, Contact pages.
+- `src/components/` – `navbar.html`, `footer.html`, `card.html`.
+- `src/styles/` – `variables.css` (theme), `style.css` (layout & components).
+- `src/scripts/` – `utils.js` (helpers), `main.js` (bootstrapping, events).
+- `public/` – Favicon, robots, sitemap.
+- `docs/` – Project documentation.
 
-All contributions must align with QuickServe IT's brand and technical principles:
+## Workflow
 
-### Visual Identity
+1. Edit HTML in `src/pages` for structure and content.
+2. Adjust shared components under `src/components`.
+3. Change visual theme in `src/styles/variables.css`.
+4. Adjust layout and responsive behavior in `src/styles/style.css`.
+5. Add/modify JS logic in `src/scripts/utils.js` and `src/scripts/main.js`.
 
-- **Premium, minimal aesthetic**: Dark matte background with warm gold accents
-- **Luxury tech studio feel**: Clean, spacious, high-contrast design
-- **No clutter**: Every element serves a purpose
-- **Warm, approachable tone**: Professional yet personal
+## Language Rules (EN / HI)
 
-### Technical Philosophy
+- Default language: English.
+- User choice stored in `localStorage`.
+- The `data-en` / `data-hi` attributes and helper function `applyLanguage()` handle translations.
+- When adding new text, provide both EN and HI wherever possible.
 
-- **Static-first**: No backend unless absolutely necessary
-- **Performance obsessed**: Fast even on low-end Android devices
-- **Accessibility focused**: Works for all users, all devices
-- **Vanilla JavaScript**: No heavy frameworks (no React, Vue, Angular)
-- **Semantic HTML**: Clean, meaningful markup
-- **Bilingual ready**: All text easily translatable to English/Hindi
+## Online Status Rules
 
----
+- Business hours: **08:00–22:00 IST**.
+- During hours:
+  - `Available now` (EN)
+  - `अभी उपलब्ध` (HI)
+- Outside hours:
+  - `Accepting requests • Replies 8 AM – 10 PM IST`
+  - Hindi equivalent
+- No explicit “Offline” words or red chips.
 
-## Code Standards
+## Contact Form
 
-### General Rules
+- Located at `src/pages/contact.html`.
+- Requires:
+  - Name
+  - Phone
+  - Service
+  - Message
+  - Terms & Privacy consent checkbox
+- On submit, prepares a WhatsApp URL with a structured message and opens it in a new tab.
 
-- Use **semantic HTML5** tags (`<section>`, `<article>`, `<nav>`, etc.)
-- Follow **DRY principle** (Don't Repeat Yourself) — extract common patterns into components
-- Use **descriptive names** for classes and functions
-- Keep functions **small and focused** (single responsibility)
-- Add **comments** for complex logic (not for obvious code)
-- Use **camelCase** for JavaScript variables and functions
-- Use **kebab-case** for CSS classes and HTML IDs
-- Use **UPPERCASE** for constants
+## Testing Checklist
 
-### File Formatting
-
-- **Indentation**: 2 spaces (not tabs)
-- **Line endings**: LF (Unix-style)
-- **Character encoding**: UTF-8 with BOM
-- **Max line length**: 100 characters (soft limit; 120 for HTML)
-
-
-### Naming Conventions
-
-| Type | Convention | Example |
-|------|-----------|---------|
-| HTML file | lowercase, hyphens | `service-a.html`, `contact.html` |
-| CSS class | lowercase, hyphens | `.nav-link`, `.hero-section`, `.btn-primary` |
-| CSS ID | lowercase, hyphens | `#contact-form`, `#status-chip` |
-| JS variable | camelCase | `currentLang`, `statusChip`, `isOnline` |
-| JS function | camelCase, verb-first | `updateGreeting()`, `initLanguageSwitch()` |
-| JS constant | UPPERCASE, underscores | `CONFIG`, `TRANSLATIONS` |
-
+- Check all pages on:
+  - Small phone (360px width)
+  - Tablet
+  - Laptop/desktop
+- Verify:
+  - EN/HI toggle works everywhere.
+  - Online status text matches current time rules.
+  - Links and buttons are clickable and properly spaced.
+  - No unexpected horizontal scroll.
