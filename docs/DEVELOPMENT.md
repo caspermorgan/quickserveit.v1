@@ -60,10 +60,6 @@ All contributions must align with QuickServe IT's brand and technical principles
 - **Character encoding**: UTF-8 with BOM
 - **Max line length**: 100 characters (soft limit; 120 for HTML)
 
----
-
-## File Structure & Naming
-
 
 ### Naming Conventions
 
@@ -94,7 +90,9 @@ All contributions must align with QuickServe IT's brand and technical principles
 <!-- Option 3: Language-specific classes (for complex layouts) -->
 <div data-lang="en" class="lang-en">English content</div>
 <div data-lang="hi" class="lang-hi">हिंदी सामग्री</div>
-Accessibility: <!-- Use alt text for all images -->
+
+
+<!-- Use alt text for all images -->
 <img src="logo.png" alt="QuickServe IT logo" loading="lazy">
 
 <!-- Use label for form inputs -->
@@ -194,9 +192,6 @@ Accessibility: <!-- Use alt text for all images -->
 .many-cards {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Light */
 }
-JavaScript Guidelines
-Structure
-text
 // 1. Configuration (top of file)
 const CONFIG = {
   whatsappNumber: '916388224877',
@@ -221,10 +216,6 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
-Language & Online Status Functions
-Always include these utilities:
-
-text
 // In src/scripts/utils.js
 
 // Get current language
@@ -265,8 +256,6 @@ function updateStatusUI(isOnline) {
     statusText.textContent = text;
   }
 }
-Form Validation
-text
 // Example: Contact form validation
 function validateContactForm(formData) {
   const errors = [];
@@ -289,8 +278,6 @@ function validateContactForm(formData) {
   
   return { valid: errors.length === 0, errors };
 }
-WhatsApp Message Template
-text
 // Build WhatsApp message
 function buildWhatsAppMessage(formData) {
   const name = encodeURIComponent(formData.name);
@@ -309,55 +296,8 @@ Message: ${message}
   
   return `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(template)}`;
 }
-Testing Checklist
-Before Committing
- No console errors or warnings (console.log() calls removed)
 
- All links work (internal and external)
 
- Form submits and opens WhatsApp correctly
-
- Language toggle works on all pages
-
- Online status updates correctly (test by changing system time)
-
- Responsive design tested at 320px, 768px, and 1024px widths
-
- No horizontal scrolling on mobile
-
- Images load properly and aren't distorted
-
-Mobile Testing (Priority: Low-End Android)
-Use Chrome DevTools Device Emulation:
-
-Open DevTools (F12)
-
-Click Device Toolbar (or Ctrl+Shift+M)
-
-Select Galaxy A50 or Pixel 3a from dropdown
-
-Test:
-
-Text readability (no zoom needed)
-
-Button tap targets (at least 48px tall)
-
-Form input focus states
-
-Animation smoothness (60 FPS target)
-
-Desktop Testing
- Chrome (latest)
-
- Firefox (latest)
-
- Safari (if on Mac)
-
- Edge (if on Windows)
-
-Performance Rules
-Image Optimisation
-text
 <!-- Always use lazy loading for below-fold images -->
 <img src="image.jpg" alt="Description" loading="lazy" width="400" height="300">
 
@@ -368,33 +308,6 @@ text
   alt="Description"
   loading="lazy"
 >
-JavaScript Performance
-text
-// Good: Debounce expensive operations
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-const handleResize = debounce(() => {
-  // Recalculate layout
-}, 250);
-
-window.addEventListener('resize', handleResize);
-
-// Bad: Execute on every single event
-window.addEventListener('scroll', () => {
-  // Expensive calculation on every pixel scroll
-});
-Animation Performance
-text
 /* Good: Use GPU-accelerated properties */
 @keyframes slideIn {
   from {
@@ -418,20 +331,6 @@ text
     visibility: visible;
   }
 }
-Accessibility
-WCAG 2.1 AA Compliance
-Color contrast: Text must have at least 4.5:1 ratio with background
-
-Keyboard navigation: All interactive elements must be keyboard accessible
-
-Focus indicators: Visible focus styles on all focusable elements
-
-Form labels: Every input must have an associated label
-
-Alt text: Every image must have descriptive alt text
-
-Implementation
-text
 <!-- Good: Semantic, accessible form -->
 <form id="contact-form">
   <label for="name">
@@ -454,29 +353,3 @@ text
 
 <!-- Bad: Non-semantic button -->
 <div class="button" onclick="doSomething()">Click me</div>
-Review & Merge
-Before a PR is merged:
-
-Code review passed (at least one approval)
-
-Design review passed (brand consistency verified)
-
-Mobile testing completed (320px–480px width)
-
-Desktop testing completed (1920px+ width)
-
-Performance verified (no significant slowdown)
-
-Accessibility verified (keyboard navigation, color contrast)
-
-Language toggle works on new pages/components
-
-Online status logic preserved and tested
-
-Questions?
-For questions about development standards, contact:
-
-Email: letsquickserveit@gmail.com
-WhatsApp: +91 6388224877
-
-Last Updated: December 5, 2025
