@@ -1,581 +1,189 @@
 /* ============================================
-   QUICKSERVE IT — COMPLETE CSS VARIABLES
-   Design System & Tokens
+   QUICKSERVE IT — CSS VARIABLES & DESIGN SYSTEM
    ============================================ */
 
 :root {
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 1: PRIMARY BRAND COLORS
-     ═════════════════════════════════════════════════════════ */
-
+  /* ─────────────────────────────────────────
+     COLOR PALETTE
+     ───────────────────────────────────────── */
+  
+  /* Primary Colors */
   --color-primary: #218081;
-  /* Description: Main brand color - Teal
-     Usage: Primary buttons, links, active states, brand elements
-     RGB: 33, 128, 129
-     Examples: CTA buttons, navigation links, hover states */
-
-  --color-primary-dark: #1a6b6a;
-  /* Description: Darker teal - for contrast and hover states
-     Usage: Button hover states, interactive elements
-     RGB: 26, 107, 106
-     Examples: :hover on buttons, focus states */
-
   --color-primary-light: #32b8c6;
-  /* Description: Lighter teal - for backgrounds and accents
-     Usage: Background colors, light accents, secondary elements
-     RGB: 50, 184, 198
-     Examples: Section backgrounds, hover effects, highlights */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 2: ACCENT COLORS (Premium/Gold)
-     ═════════════════════════════════════════════════════════ */
-
+  --color-primary-dark: #1a6d75;
+  
+  /* Accent Colors */
   --color-accent-bright: #d4af37;
-  /* Description: Bright gold accent
-     Usage: Premium elements, ratings, special highlights
-     RGB: 212, 175, 55
-     Examples: Star ratings, premium badges, highlight accents */
-
-  --color-accent-gold: #d4af37;
-  /* Description: Gold accent (same as accent-bright)
-     Usage: Consistent gold for all premium accents
-     RGB: 212, 175, 55
-     Examples: 5-star ratings, gold text accents */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 3: NEUTRAL COLORS (White/Black)
-     ═════════════════════════════════════════════════════════ */
-
+  --color-accent-gold: #c79a1b;
+  --color-accent-muted: #8b7500;
+  
+  /* Neutral Colors */
   --color-white: #ffffff;
-  /* Description: Pure white
-     Usage: Text on dark backgrounds, button text
-     RGB: 255, 255, 255
-     Examples: White text on teal buttons, white backgrounds */
-
-  --color-black: #000000;
-  /* Description: Pure black
-     Usage: Extreme contrast, rarely used
-     RGB: 0, 0, 0
-     Examples: Black text on white, pure contrast needs */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 4: TEXT COLORS
-     ═════════════════════════════════════════════════════════ */
-
-  --color-text-primary: #0b0b0b;
-  /* Description: Primary text color - very dark (almost black)
-     Usage: Main body text, headings, important content
-     RGB: 11, 11, 11
-     Contrast Ratio: 21:1 with white (AAA accessibility)
-     Examples: All paragraph text, heading text, main content */
-
-  --color-text-secondary: #505050;
-  /* Description: Secondary text color - medium gray
-     Usage: Captions, help text, de-emphasized content
-     RGB: 80, 80, 80
-     Contrast Ratio: 8.5:1 with white (AAA accessibility)
-     Examples: Form labels, subtitles, metadata, timestamps */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 5: BACKGROUND COLORS
-     ═════════════════════════════════════════════════════════ */
-
-  --color-background: #f9f9f9;
-  /* Description: Main page background - light gray
-     Usage: Base page background color
-     RGB: 249, 249, 249
-     Examples: Body background, page wrapper background */
-
-  --color-surface: #ffffff;
-  /* Description: Surface/card background - pure white
-     Usage: Cards, containers, modal backgrounds
-     RGB: 255, 255, 255
-     Examples: Card backgrounds, form containers, dropdowns */
-
-  --color-surface-alt: #f0f0f0;
-  /* Description: Alternative surface - slightly darker gray
-     Usage: Secondary backgrounds, striped rows
-     RGB: 240, 240, 240
-     Examples: Alternate row colors, secondary panels */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 6: BORDER COLORS
-     ═════════════════════════════════════════════════════════ */
-
-  --color-border: #e0e0e0;
-  /* Description: Default border color - light gray
-     Usage: Borders on cards, dividers, input fields
-     RGB: 224, 224, 224
-     Examples: Card borders, input borders, divider lines */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 7: GRAYSCALE PALETTE (100-900)
-     ═════════════════════════════════════════════════════════ */
-
-  --color-gray-100: #f5f5f5;
-  /* Description: Lightest gray (almost white)
-     Usage: Very subtle backgrounds, light accents
-     RGB: 245, 245, 245
-     Examples: Hover backgrounds, very light cards */
-
-  --color-gray-200: #eeeeee;
-  /* Description: Very light gray
-     Usage: Light backgrounds, subtle elements
-     RGB: 238, 238, 238
-     Examples: Input backgrounds, light borders */
-
-  --color-gray-300: #d0d0d0;
-  /* Description: Light gray
-     Usage: Visible borders, disabled states
-     RGB: 208, 208, 208
-     Examples: Input borders, form borders */
-
+  --color-black: #0b0b0b;
+  --color-gray-50: #f9f9f9;
+  --color-gray-100: #f3f3f3;
+  --color-gray-200: #e8e8e8;
+  --color-gray-300: #d4d4d4;
   --color-gray-400: #a0a0a0;
-  /* Description: Medium-light gray
-     Usage: Placeholders, disabled text
-     RGB: 160, 160, 160
-     Examples: Placeholder text, disabled buttons */
-
-  --color-gray-500: #808080;
-  /* Description: Medium gray (neutral)
-     Usage: Secondary text, icons
-     RGB: 128, 128, 128
-     Examples: Icon colors, secondary labels */
-
-  --color-gray-600: #606060;
-  /* Description: Medium-dark gray
-     Usage: Dark secondary text
-     RGB: 96, 96, 96
-     Examples: Footer text, secondary headings */
-
-  --color-gray-700: #404040;
-  /* Description: Dark gray
-     Usage: Emphasis, strong secondary text
-     RGB: 64, 64, 64
-     Examples: Emphasized text, dark elements */
-
-  --color-gray-800: #303030;
-  /* Description: Very dark gray
-     Usage: Alternative dark text
-     RGB: 48, 48, 48
-     Examples: Alternative body text color */
-
-  --color-gray-900: #1a1a1a;
-  /* Description: Darkest gray (almost black)
-     Usage: Footer backgrounds, very dark text
-     RGB: 26, 26, 26
-     Examples: Footer backgrounds, dark mode base */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 8: STATUS COLORS (Semantic)
-     ═════════════════════════════════════════════════════════ */
-
-  --color-success: #22c55e;
-  /* Description: Success/positive color - bright green
-     Usage: Success messages, checkmarks, positive states
-     RGB: 34, 197, 94
-     Examples: Success alerts, green checkmarks, confirmed states */
-
-  --color-error: #ef4444;
-  /* Description: Error/danger color - bright red
-     Usage: Error messages, validation errors, danger actions
-     RGB: 239, 68, 68
-     Examples: Error alerts, red X icons, delete confirmations */
-
+  --color-gray-500: #717171;
+  --color-gray-600: #505050;
+  --color-gray-700: #2a2a2a;
+  --color-gray-800: #1a1a1a;
+  --color-gray-900: #0d0d0d;
+  
+  /* Status Colors */
+  --color-success: #10b981;
   --color-warning: #f59e0b;
-  /* Description: Warning color - amber/orange
-     Usage: Warning messages, cautions
-     RGB: 245, 158, 11
-     Examples: Warning alerts, caution badges, pending states */
-
+  --color-error: #ef4444;
   --color-info: #3b82f6;
-  /* Description: Info color - bright blue
-     Usage: Information messages, help text
-     RGB: 59, 130, 246
-     Examples: Info alerts, information badges */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 9: TYPOGRAPHY - FONT FAMILIES
-     ═════════════════════════════════════════════════════════ */
-
-  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  /* Description: Primary font stack for body text and general UI
-     Font: Inter (modern, geometric, excellent for screens)
-     Fallbacks: 
-       - -apple-system (San Francisco on Apple devices)
-       - BlinkMacSystemFont (macOS/iOS system font)
-       - Segoe UI (Windows system font)
-       - Roboto (Android system font)
-       - Helvetica Neue (older macOS)
-       - sans-serif (ultimate fallback)
-     Usage: Body text, headings, UI elements
-     Characteristics: Clean, modern, highly readable, professional */
-
-  --font-family-mono: 'Courier New', monospace;
-  /* Description: Monospace font for code blocks
-     Font: Courier New (widely available monospace)
-     Fallback: monospace (system default)
-     Usage: Code snippets, technical content, variable names
-     Characteristics: Fixed-width, suitable for code display */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 10: TYPOGRAPHY - FONT SIZES
-     ═════════════════════════════════════════════════════════ */
-
+  
+  /* Semantic Colors */
+  --color-background: #f9f9f9;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f3f3f3;
+  --color-text-primary: #0b0b0b;
+  --color-text-secondary: #505050;
+  --color-text-muted: #717171;
+  --color-border: #e8e8e8;
+  --color-border-light: #f3f3f3;
+  --color-divider: #d4d4d4;
+  
+  /* ─────────────────────────────────────────
+     TYPOGRAPHY
+     ───────────────────────────────────────── */
+  
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --font-family-mono: 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  
   --font-size-xs: 11px;
-  /* Description: Extra small text
-     Usage: Captions, tiny labels, metadata
-     Examples: Image captions, timestamps, badge text */
-
   --font-size-sm: 13px;
-  /* Description: Small text
-     Usage: Labels, help text, form instructions
-     Examples: Form labels, placeholder text, small notes */
-
   --font-size-base: 14px;
-  /* Description: Base/default text size
-     Usage: Body text, main content
-     Examples: Paragraph text, standard body content */
-
   --font-size-md: 15px;
-  /* Description: Medium text
-     Usage: Slightly emphasized body text
-     Examples: Important body text, form inputs */
-
   --font-size-lg: 16px;
-  /* Description: Large text
-     Usage: Prominent body text, smaller headings
-     Examples: Featured quotes, subheadings, prominent body */
-
   --font-size-xl: 18px;
-  /* Description: Extra large text
-     Usage: Subheadings, card titles
-     Examples: Card titles, section subheadings */
-
   --font-size-2xl: 20px;
-  /* Description: 2x large text
-     Usage: Small headings, prominent titles
-     Examples: Card titles, small section headings */
-
   --font-size-3xl: 24px;
-  /* Description: 3x large text
-     Usage: Medium headings, section titles
-     Examples: Section headings, medium page titles */
-
   --font-size-4xl: 30px;
-  /* Description: 4x large text
-     Usage: Large headings, page subheadings
-     Examples: Page subtitles, large section titles */
-
   --font-size-5xl: 36px;
-  /* Description: 5x large text
-     Usage: Main page headings, hero titles
-     Examples: Homepage hero heading, main page title */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 11: TYPOGRAPHY - FONT WEIGHTS
-     ═════════════════════════════════════════════════════════ */
-
+  --font-size-6xl: 48px;
+  
   --font-weight-normal: 400;
-  /* Description: Normal/regular font weight
-     Usage: Body text, default text
-     Examples: Paragraph text, default content
-     Characteristics: Readable, not emphasized */
-
   --font-weight-medium: 500;
-  /* Description: Medium font weight
-     Usage: Emphasis, semi-bold text
-     Examples: Important labels, emphasized text */
-
   --font-weight-semibold: 600;
-  /* Description: Semi-bold font weight
-     Usage: Strong emphasis, subheadings
-     Examples: Card titles, strong emphasis, highlighted text */
-
   --font-weight-bold: 700;
-  /* Description: Bold font weight
-     Usage: Headings, very strong emphasis
-     Examples: All heading levels, strong/bold text */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 12: TYPOGRAPHY - LINE HEIGHT
-     ═════════════════════════════════════════════════════════ */
-
+  
   --line-height-tight: 1.2;
-  /* Description: Tight line spacing (ratio: 1.2x)
-     Usage: Headings, compact text
-     Examples: All heading text, compact layouts
-     Readability: Fast scanning, formal appearance */
-
   --line-height-normal: 1.5;
-  /* Description: Normal line spacing (ratio: 1.5x)
-     Usage: Body text, default content
-     Examples: Paragraph text, standard body content
-     Readability: Standard, comfortable reading */
-
   --line-height-relaxed: 1.75;
-  /* Description: Relaxed line spacing (ratio: 1.75x)
-     Usage: Long-form text, readability focused
-     Examples: Articles, long paragraphs, blog text
-     Readability: Open, easy for extended reading */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 13: TYPOGRAPHY - LETTER SPACING
-     ═════════════════════════════════════════════════════════ */
-
+  --line-height-loose: 2;
+  
   --letter-spacing-tight: -0.01em;
-  /* Description: Tight letter spacing (-1% of font size)
-     Usage: Headings to reduce spacing between letters
-     Examples: Large headings, condensed text
-     Effect: Makes text appear tighter, more premium */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 14: SPACING SCALE (4px Base Unit System)
-     ═════════════════════════════════════════════════════════ */
-
-  /* Base Unit: 4px
-     All spacing values are multiples of 4px for consistency
-     This creates a predictable, harmonious spacing system */
-
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  
+  /* ─────────────────────────────────────────
+     SPACING
+     ───────────────────────────────────────── */
+  
   --space-1: 4px;
-  /* 1 unit - Use for: minimal gaps, tiny spacing */
-
   --space-2: 8px;
-  /* 2 units - Use for: icon spacing, small gaps between elements */
-
   --space-3: 12px;
-  /* 3 units - Use for: form label spacing, small padding */
-
   --space-4: 16px;
-  /* 4 units - Use for: standard padding, default gap between elements */
-
   --space-5: 20px;
-  /* 5 units - Use for: slightly larger spacing */
-
   --space-6: 24px;
-  /* 6 units - Use for: card padding, moderate spacing between sections */
-
   --space-8: 32px;
-  /* 8 units - Use for: section interior spacing, larger gaps */
-
   --space-10: 40px;
-  /* 10 units - Use for: spacing between major sections */
-
   --space-12: 48px;
-  /* 12 units - Use for: large spacing between elements */
-
   --space-16: 64px;
-  /* 16 units - Use for: major section spacing, large gaps */
-
   --space-20: 80px;
-  /* 20 units - Use for: large section spacing */
-
   --space-24: 96px;
-  /* 24 units - Use for: hero section padding, very large spacing */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 15: BORDER RADIUS (Rounded Corners)
-     ═════════════════════════════════════════════════════════ */
-
+  
+  /* ─────────────────────────────────────────
+     BORDER RADIUS
+     ───────────────────────────────────────── */
+  
   --radius-sm: 4px;
-  /* Description: Small border radius
-     Usage: Minimal roundness, technical elements
-     Examples: Small buttons, input fields corners */
-
   --radius-md: 6px;
-  /* Description: Medium border radius
-     Usage: Standard roundness
-     Examples: Form inputs, small cards */
-
   --radius-lg: 8px;
-  /* Description: Large border radius
-     Usage: Visible roundness, primary elements
-     Examples: Buttons, form inputs, small cards */
-
   --radius-xl: 12px;
-  /* Description: Extra large border radius
-     Usage: Very rounded, prominent cards
-     Examples: Large cards, modals, hero sections */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 16: SHADOW SYSTEM (Depth & Elevation)
-     ═════════════════════════════════════════════════════════ */
-
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  /* Description: Subtle shadow - minimal elevation
-     Usage: Cards at rest, minimal depth
-     Effect: Slight separation from background
-     Examples: Regular cards, default state elements */
-
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Description: Medium shadow - moderate elevation
-     Usage: Buttons, dropdowns, interactive elements
-     Effect: Visible but not overwhelming
-     Examples: Hover states, buttons, medium elevation */
-
-  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
-  /* Description: Large shadow - significant elevation
-     Usage: Hover states, important cards, overlays
-     Effect: Strong visual hierarchy
-     Examples: Card hover, dropdown hover, modals */
-
-  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
-  /* Description: Extra large shadow - high elevation
-     Usage: Prominent elements, modals, popovers
-     Effect: Very strong visual separation
-     Examples: Modal dialogs, prominent overlays */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 17: TRANSITIONS & ANIMATIONS - DURATION
-     ═════════════════════════════════════════════════════════ */
-
+  --radius-2xl: 16px;
+  --radius-full: 9999px;
+  
+  /* ─────────────────────────────────────────
+     SHADOWS
+     ───────────────────────────────────────── */
+  
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* ─────────────────────────────────────────
+     TRANSITIONS & ANIMATIONS
+     ───────────────────────────────────────── */
+  
   --duration-fast: 150ms;
-  /* Description: Fast animation duration
-     Usage: Quick feedback animations, hover effects
-     Perception: Snappy, immediate response
-     Examples: Button hover color change, quick toggles */
-
   --duration-normal: 250ms;
-  /* Description: Standard animation duration
-     Usage: Standard UI transitions, typical interactions
-     Perception: Natural, comfortable speed
-     Examples: Opening menus, changing pages, standard transitions */
-
   --duration-slow: 350ms;
-  /* Description: Slow animation duration
-     Usage: Deliberate animations, important transitions
-     Perception: Graceful, purposeful movement
-     Examples: Modal opening, important state changes */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 18: TRANSITIONS & ANIMATIONS - EASING
-     ═════════════════════════════════════════════════════════ */
-
+  
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
-  /* Description: Ease-in curve (slow start, fast end)
-     Usage: Entrance animations, elements appearing
-     Motion: Accelerates from slow to fast
-     Examples: Fade in, slide in from top/bottom */
-
   --ease-out: cubic-bezier(0, 0, 0.2, 1);
-  /* Description: Ease-out curve (fast start, slow end)
-     Usage: Exit animations, elements disappearing
-     Motion: Decelerates from fast to slow
-     Examples: Fade out, slide out, hover exit */
-
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-  /* Description: Ease-in-out curve (accelerate then decelerate)
-     Usage: Smooth back-and-forth animations
-     Motion: Smooth throughout animation
-     Examples: Smooth transitions, bouncy effects */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 19: TRANSITIONS & ANIMATIONS - SHORTCUTS
-     ═════════════════════════════════════════════════════════ */
-
-  --transition-colors: color var(--duration-normal), background-color var(--duration-normal), border-color var(--duration-normal);
-  /* Description: Transition shortcut for color changes
-     Usage: When only colors change (text, background, border)
-     Duration: 250ms
-     Examples: Hover color changes, state changes */
-
-  --transition-base: all var(--duration-normal) var(--ease-out);
-  /* Description: Transition shortcut for all properties
-     Usage: When multiple properties change
-     Duration: 250ms
-     Easing: Ease-out for natural feel
-     Examples: Complex transitions, multi-property changes */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 20: CONTAINER SIZES (Responsive Breakpoints)
-     ═════════════════════════════════════════════════════════ */
-
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* ─────────────────────────────────────────
+     CONTAINER WIDTHS
+     ───────────────────────────────────────── */
+  
   --container-sm: 640px;
-  /* Description: Small container width
-     Usage: Mobile-optimized layouts
-     Device: Mobile phones (landscape)
-     Examples: Mobile-first layouts, compact content */
-
   --container-md: 768px;
-  /* Description: Medium container width
-     Usage: Tablet layouts
-     Device: Tablets, small desktops
-     Examples: Tablet view, transitional layouts */
-
   --container-lg: 1024px;
-  /* Description: Large container width
-     Usage: Desktop layouts
-     Device: Desktop computers
-     Examples: Desktop view, standard layouts */
-
   --container-xl: 1280px;
-  /* Description: Extra large container width
-     Usage: Wide desktop layouts
-     Device: Large desktop screens
-     Examples: Large desktop, wide layouts */
-
   --container-2xl: 1536px;
-  /* Description: 2x large container width
-     Usage: Ultra-wide layouts
-     Device: Very large screens (4K, ultrawide monitors)
-     Examples: Ultra-wide displays, premium layouts */
-
-  /* ═════════════════════════════════════════════════════════
-     SECTION 21: Z-INDEX LAYERING (Stacking Order)
-     ═════════════════════════════════════════════════════════ */
-
-  /* Z-index determines visual stacking order
-     Higher value = appears on top
-     Keep gaps between layers for future elements */
-
+  
+  /* ─────────────────────────────────────────
+     Z-INDEX SCALE
+     ───────────────────────────────────────── */
+  
   --z-dropdown: 1000;
-  /* Usage: Dropdown menus, select options
-     Examples: Navigation dropdowns, select menus */
-
   --z-sticky: 1020;
-  /* Usage: Sticky/fixed navigation bars
-     Examples: Header navbar, fixed sidebar */
-
   --z-fixed: 1030;
-  /* Usage: Fixed positioning elements
-     Examples: Fixed buttons, fixed sidebars */
-
   --z-modal-backdrop: 1040;
-  /* Usage: Modal background overlay
-     Examples: Darkened background behind modals */
-
   --z-modal: 1050;
-  /* Usage: Modal dialogs
-     Examples: Dialog boxes, confirmation popups */
-
   --z-popover: 1060;
-  /* Usage: Popover containers
-     Examples: Popover containers, nested overlays */
-
   --z-tooltip: 1070;
-  /* Usage: Tooltips (topmost)
-     Examples: Hover tooltips, help text overlays */
+}
 
-  /* ═════════════════════════════════════════════════════════
-     SECTION 22: FOCUS & ACCESSIBILITY STYLES
-     ═════════════════════════════════════════════════════════ */
+/* ─────────────────────────────────────────
+   DARK MODE OVERRIDES (if needed)
+   ───────────────────────────────────────── */
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #0d0d0d;
+    --color-surface: #1a1a1a;
+    --color-surface-alt: #2a2a2a;
+    --color-text-primary: #f9f9f9;
+    --color-text-secondary: #a0a0a0;
+    --color-text-muted: #717171;
+    --color-border: #2a2a2a;
+    --color-border-light: #1a1a1a;
+    --color-divider: #505050;
+  }
+}
+
+/* ─────────────────────────────────────────
+   UTILITY VARIABLES
+   ───────────────────────────────────────── */
+
+:root {
+  --transition-base: all var(--duration-normal) var(--ease-in-out);
+  --transition-fade: opacity var(--duration-normal) var(--ease-in-out);
+  --transition-colors: background-color var(--duration-normal) var(--ease-in-out), 
+                       color var(--duration-normal) var(--ease-in-out),
+                       border-color var(--duration-normal) var(--ease-in-out);
+  
   --focus-outline: 2px solid var(--color-primary);
-  /* Description: Keyboard focus indicator outline
-     Usage: Visible focus state for keyboard navigation
-     Color: Primary teal (#218081)
-     Style: 2px solid line
-     Examples: Tab key focus on buttons, input focus */
-
   --focus-offset: 2px;
-  /* Description: Space between element and focus outline
-     Usage: Gap between element border and focus indicator
-     Distance: 2px outward
-     Examples: Focus ring spacing around buttons */
-
-  /* ═════════════════════════════════════════════════════════
-     END OF COMPLETE CSS VARIABLES FILE
-     ═════════════════════════════════════════════════════════ */
-
 }
