@@ -1,432 +1,482 @@
-# Development Guide - QuickServe IT
+# QuickServe IT — Developer Guidelines
 
-**Complete Developer Reference & Coding Standards**
+This document provides guidelines for contributing to the QuickServe IT website project, maintaining code quality, and ensuring consistency with the brand identity.
 
 ---
 
 ## Table of Contents
 
-1. [Setup](#setup)
-2. [HTML Standards](#html-standards)
-3. [CSS Architecture](#css-architecture)
-4. [JavaScript Guidelines](#javascript-guidelines)
-5. [Component Structure](#component-structure)
-6. [Testing Checklist](#testing-checklist)
-7. [Common Pitfalls](#common-pitfalls)
+- [Design Philosophy](#design-philosophy)
+- [Code Standards](#code-standards)
+- [File Structure & Naming](#file-structure--naming)
+- [HTML Guidelines](#html-guidelines)
+- [CSS Guidelines](#css-guidelines)
+- [JavaScript Guidelines](#javascript-guidelines)
+- [Testing Checklist](#testing-checklist)
+- [Performance Rules](#performance-rules)
+- [Accessibility](#accessibility)
 
 ---
 
-## Setup
+## Design Philosophy
 
-### Prerequisites
-- VS Code or modern code editor
-- Git
-- Browser DevTools
+All contributions must align with QuickServe IT's brand and technical principles:
 
-### Development Workflow
+### Visual Identity
 
-```bash
-# Clone repository
-git clone https://github.com/caspermorgan/quickserveit.v1.git
-cd quickserveit.v1
+- **Premium, minimal aesthetic**: Dark matte background with warm gold accents
+- **Luxury tech studio feel**: Clean, spacious, high-contrast design
+- **No clutter**: Every element serves a purpose
+- **Warm, approachable tone**: Professional yet personal
 
-# Start local server (Python 3)
-python -m http.server 8000
+### Technical Philosophy
 
-# Or use Node.js
-npx http-server
-
-# Visit in browser
-# http://localhost:8000
-```
-
-### Required Tools
-- Code formatter: Prettier (optional but recommended)
-- Image optimizer: TinyPNG, Squoosh
-- Git for version control
+- **Static-first**: No backend unless absolutely necessary
+- **Performance obsessed**: Fast even on low-end Android devices
+- **Accessibility focused**: Works for all users, all devices
+- **Vanilla JavaScript**: No heavy frameworks (no React, Vue, Angular)
+- **Semantic HTML**: Clean, meaningful markup
+- **Bilingual ready**: All text easily translatable to English/Hindi
 
 ---
 
-## HTML Standards
+## Code Standards
 
-### Semantic Structure
+### General Rules
 
-```html
-<!-- Good ✓ -->
-<header class="header">
-  <nav class="navbar">...</nav>
-</header>
+- Use **semantic HTML5** tags (`<section>`, `<article>`, `<nav>`, etc.)
+- Follow **DRY principle** (Don't Repeat Yourself) — extract common patterns into components
+- Use **descriptive names** for classes and functions
+- Keep functions **small and focused** (single responsibility)
+- Add **comments** for complex logic (not for obvious code)
+- Use **camelCase** for JavaScript variables and functions
+- Use **kebab-case** for CSS classes and HTML IDs
+- Use **UPPERCASE** for constants
 
-<main>
-  <section class="hero">
-    <h1>Main Heading</h1>
-    <article class="service-card">
-      <h2>Subheading</h2>
-      <p>Content</p>
-    </article>
-  </section>
-</main>
+### File Formatting
 
-<footer class="footer">...</footer>
+- **Indentation**: 2 spaces (not tabs)
+- **Line endings**: LF (Unix-style)
+- **Character encoding**: UTF-8 with BOM
+- **Max line length**: 100 characters (soft limit; 120 for HTML)
 
-<!-- Bad ✗ -->
-<div class="header">
-  <div class="navbar">...</div>
-</div>
-```
+---
 
-### Meta Tags
+## File Structure & Naming
 
-Every page must include:
 
-```html
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Clear, unique description">
-<meta name="keywords" content="relevant, keywords">
-<title>Clear Title (50-65 chars)</title>
-<link rel="canonical" href="https://quickserve.online/page">
-<link rel="icon" href="/assets/favicon.ico">
+### Naming Conventions
 
-<!-- Open Graph -->
-<meta property="og:title" content="Page Title">
-<meta property="og:description" content="Description">
-<meta property="og:image" content="/assets/og-image.webp">
-<meta property="og:url" content="https://quickserve.online">
-```
+| Type | Convention | Example |
+|------|-----------|---------|
+| HTML file | lowercase, hyphens | `service-a.html`, `contact.html` |
+| CSS class | lowercase, hyphens | `.nav-link`, `.hero-section`, `.btn-primary` |
+| CSS ID | lowercase, hyphens | `#contact-form`, `#status-chip` |
+| JS variable | camelCase | `currentLang`, `statusChip`, `isOnline` |
+| JS function | camelCase, verb-first | `updateGreeting()`, `initLanguageSwitch()` |
+| JS constant | UPPERCASE, underscores | `CONFIG`, `TRANSLATIONS` |
 
-### Indentation & Formatting
+---
 
-- Use 2 spaces for indentation
-- One attribute per line for clarity
-- Always use lowercase tags
-- Proper nesting
+## HTML Guidelines
 
-```html
-<button
-  class="button button--primary"
-  type="submit"
-  aria-label="Submit form"
->
-  Submit
+### Semantic Markup
+
+<!-- Option 1: data attributes (preferred for element text) -->
+<h1 data-en="Welcome to QuickServe IT" data-hi="QuickServe IT में आपका स्वागत है">
+  Welcome to QuickServe IT
+</h1>
+
+<!-- Option 2: JavaScript-driven (for dynamic content) -->
+<p id="greeting"></p>
+<!-- Updated by JavaScript: greeting.textContent = getTranslation('greetings.morning') -->
+
+<!-- Option 3: Language-specific classes (for complex layouts) -->
+<div data-lang="en" class="lang-en">English content</div>
+<div data-lang="hi" class="lang-hi">हिंदी सामग्री</div>
+Accessibility: <!-- Use alt text for all images -->
+<img src="logo.png" alt="QuickServe IT logo" loading="lazy">
+
+<!-- Use label for form inputs -->
+<label for="name-input">Name</label>
+<input id="name-input" type="text" required>
+
+<!-- Use button for actions, a for links -->
+<button type="submit">Submit</button>
+<a href="/contact.html">Contact Us</a>
+
+<!-- Use aria-label for icon buttons -->
+<button aria-label="Toggle navigation menu">
+  <i class="icon-menu"></i>
 </button>
-```
-
-### Images & Media
-
-```html
-<!-- Correct ✓ -->
-<img 
-  src="/assets/img/services/documentation.webp" 
-  alt="Professional documentation services for institutes"
-  loading="lazy"
-  width="400"
-  height="300"
->
-
-<!-- Wrong ✗ -->
-<img src="image.jpg">
-<img src="image.png" alt="image">
-```
-
----
-
-## CSS Architecture
-
-### File Organization
-
-```
-assets/css/
-├── style.css         # Global styles, variables
-├── components.css    # Reusable components
-├── layouts.css       # Header, footer, grid
-└── responsive.css    # Media queries
-```
-
-### CSS Variables
-
-```css
 :root {
   /* Colors */
-  --black: #000000;
-  --gold-dark: #C9A86A;
-  --gold: #FFD700;
-  --white: #FFFFFF;
-  --grey: #D5D5D5;
-  
-  /* Spacing (8px grid) */
-  --space-xs: 8px;
-  --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 32px;
-  --space-xl: 48px;
+  --color-primary: #0B0B0B;           /* Dark background */
+  --color-accent: #D4AF37;             /* Gold accent */
+  --color-text: #E0E0E0;               /* Light text */
+  --color-text-muted: #888888;         /* Muted text */
   
   /* Typography */
-  --font-main: 'Poppins', sans-serif;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-size-base: 16px;
-  --line-height-base: 1.6;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-out;
+  --transition-smooth: 300ms ease-out;
 }
-```
-
-### Mobile-First Approach
-
-```css
-/* Mobile first (default) */
-.button {
-  padding: 12px 20px;
-  font-size: 14px;
-  width: 100%;
+/* Mobile-first (base styles) */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  gap: var(--space-sm);
 }
 
-/* Tablet */
+/* Tablet and up */
 @media (min-width: 768px) {
-  .button {
-    width: auto;
-    padding: 14px 30px;
+  .service-card {
+    flex-direction: row;
+    padding: var(--space-lg);
   }
 }
 
-/* Desktop */
+/* Desktop and up */
 @media (min-width: 1024px) {
-  .button {
-    font-size: 16px;
+  .service-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
 }
-```
-
-### BEM Naming
-
-```css
-/* Block */
-.service-card { }
-
-/* Element */
-.service-card__title { }
-.service-card__description { }
-
-/* Modifier */
-.service-card--featured { }
-.button--primary { }
-.button--secondary { }
-```
-
-### No Inline Styles
-
-```html
-<!-- Wrong ✗ -->
-<div style="color: #C9A86A; padding: 20px;">Text</div>
-
-<!-- Correct ✓ -->
-<!-- HTML -->
-<div class="highlight-box">Text</div>
-
-<!-- CSS -->
-.highlight-box {
-  color: var(--gold-dark);
-  padding: var(--space-lg);
+/* Good: Use transform & opacity for animations */
+.card:hover {
+  transform: translateY(-4px);
+  opacity: 0.95;
 }
-```
 
----
+/* Bad: Avoid animating width, height, left, right (causes layout thrashing) */
+.card:hover {
+  width: 120%;      /* Causes reflow */
+  left: -10px;      /* Causes reflow */
+}
 
-## JavaScript Guidelines
+/* Good: Use will-change sparingly for heavy animations */
+.animated-element {
+  will-change: transform, opacity;
+}
 
-### Basic Rules
+/* Bad: Avoid expensive shadows on many elements */
+.many-cards {
+  box-shadow: 0 0 50px 50px rgba(0, 0, 0, 0.5);  /* Heavy */
+}
 
-```javascript
-// Use const and let, NEVER var
-const maxItems = 10;  // ✓
-let counter = 0;      // ✓
-var old = 5;          // ✗
+/* Better: Subtle shadow */
+.many-cards {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Light */
+}
+JavaScript Guidelines
+Structure
+text
+// 1. Configuration (top of file)
+const CONFIG = {
+  whatsappNumber: '916388224877',
+  email: 'letsquickserveit@gmail.com',
+};
 
-// Wait for DOM to load
-document.addEventListener('DOMContentLoaded', function() {
-  // Your code here
+// 2. Translations (if not in utils.js)
+const TRANSLATIONS = { /* ... */ };
+
+// 3. State variables
+let currentLang = 'en';
+
+// 4. Utility functions (before they're used)
+function showToast(message) { /* ... */ }
+
+// 5. Main logic
+function init() { /* ... */ }
+
+// 6. Initialization trigger
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+Language & Online Status Functions
+Always include these utilities:
+
+text
+// In src/scripts/utils.js
+
+// Get current language
+function getCurrentLanguage() {
+  return localStorage.getItem('quickserve-lang') || 'en';
+}
+
+// Update online status (call every minute)
+function updateOnlineStatus() {
+  const now = new Date();
+  const day = now.getDay();     // 0 = Sunday, 6 = Saturday
+  const hour = now.getHours();
+  
+  let isOnline = false;
+  
+  // Business hours: Mon-Sat 8 AM - 10 PM
+  if (day >= 1 && day <= 6) {
+    isOnline = hour >= 8 && hour < 22;
+  }
+  
+  updateStatusUI(isOnline);
+}
+
+function updateStatusUI(isOnline) {
+  const statusChip = document.getElementById('statusChip');
+  const statusText = document.getElementById('statusText');
+  
+  if (!statusChip || !statusText) return;
+  
+  if (isOnline) {
+    statusChip.classList.remove('offline');
+    statusText.textContent = getCurrentLanguage() === 'en' ? 'Available now' : 'अभी उपलब्ध';
+  } else {
+    statusChip.classList.add('offline');
+    const text = getCurrentLanguage() === 'en' 
+      ? 'Accepting requests -  Replies 8 AM–10 PM IST'
+      : 'अनुरोध स्वीकार हो रहे हैं -  जवाब सुबह 8 बजे से रात 10 बजे के बीच';
+    statusText.textContent = text;
+  }
+}
+Form Validation
+text
+// Example: Contact form validation
+function validateContactForm(formData) {
+  const errors = [];
+  
+  if (!formData.name || formData.name.trim().length < 2) {
+    errors.push('Name must be at least 2 characters');
+  }
+  
+  if (!formData.phone || !/^\d{10}$/.test(formData.phone.replace(/\D/g, ''))) {
+    errors.push('Phone must be 10 digits');
+  }
+  
+  if (!formData.message || formData.message.trim().length < 5) {
+    errors.push('Message must be at least 5 characters');
+  }
+  
+  if (!formData.consent) {
+    errors.push('You must agree to Terms & Conditions');
+  }
+  
+  return { valid: errors.length === 0, errors };
+}
+WhatsApp Message Template
+text
+// Build WhatsApp message
+function buildWhatsAppMessage(formData) {
+  const name = encodeURIComponent(formData.name);
+  const phone = encodeURIComponent(formData.phone);
+  const service = encodeURIComponent(formData.service);
+  const message = encodeURIComponent(formData.message);
+  
+  const template = `
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Message: ${message}
+
+[Submitted via QuickServe IT website]
+  `.trim();
+  
+  return `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(template)}`;
+}
+Testing Checklist
+Before Committing
+ No console errors or warnings (console.log() calls removed)
+
+ All links work (internal and external)
+
+ Form submits and opens WhatsApp correctly
+
+ Language toggle works on all pages
+
+ Online status updates correctly (test by changing system time)
+
+ Responsive design tested at 320px, 768px, and 1024px widths
+
+ No horizontal scrolling on mobile
+
+ Images load properly and aren't distorted
+
+Mobile Testing (Priority: Low-End Android)
+Use Chrome DevTools Device Emulation:
+
+Open DevTools (F12)
+
+Click Device Toolbar (or Ctrl+Shift+M)
+
+Select Galaxy A50 or Pixel 3a from dropdown
+
+Test:
+
+Text readability (no zoom needed)
+
+Button tap targets (at least 48px tall)
+
+Form input focus states
+
+Animation smoothness (60 FPS target)
+
+Desktop Testing
+ Chrome (latest)
+
+ Firefox (latest)
+
+ Safari (if on Mac)
+
+ Edge (if on Windows)
+
+Performance Rules
+Image Optimisation
+text
+<!-- Always use lazy loading for below-fold images -->
+<img src="image.jpg" alt="Description" loading="lazy" width="400" height="300">
+
+<!-- Use srcset for responsive images (optional) -->
+<img 
+  src="image-small.jpg" 
+  srcset="image-small.jpg 480w, image-medium.jpg 768w, image-large.jpg 1024w"
+  alt="Description"
+  loading="lazy"
+>
+JavaScript Performance
+text
+// Good: Debounce expensive operations
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+const handleResize = debounce(() => {
+  // Recalculate layout
+}, 250);
+
+window.addEventListener('resize', handleResize);
+
+// Bad: Execute on every single event
+window.addEventListener('scroll', () => {
+  // Expensive calculation on every pixel scroll
 });
-```
+Animation Performance
+text
+/* Good: Use GPU-accelerated properties */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
-### Mobile Menu Toggle
+/* Bad: Layout-thrashing properties */
+@keyframes slideIn {
+  from {
+    left: -100px;        /* Causes reflow */
+    visibility: hidden;
+  }
+  to {
+    left: 0;
+    visibility: visible;
+  }
+}
+Accessibility
+WCAG 2.1 AA Compliance
+Color contrast: Text must have at least 4.5:1 ratio with background
 
-```javascript
-// This is the MAIN use of JavaScript on this site
-const menuBtn = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+Keyboard navigation: All interactive elements must be keyboard accessible
 
-menuBtn.addEventListener('click', function() {
-  navLinks.classList.toggle('active');
-});
+Focus indicators: Visible focus styles on all focusable elements
 
-// Close menu when link clicked
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', function() {
-    navLinks.classList.remove('active');
-  });
-});
-```
+Form labels: Every input must have an associated label
 
-### Minimal JS Philosophy
+Alt text: Every image must have descriptive alt text
 
-- No jQuery
-- No frameworks
-- Vanilla JavaScript only
-- Keep scripts in `/assets/js/main.js`
-- No inline script tags
+Implementation
+text
+<!-- Good: Semantic, accessible form -->
+<form id="contact-form">
+  <label for="name">
+    <span>Name</span>
+    <input id="name" type="text" required aria-required="true">
+  </label>
+  
+  <label for="consent">
+    <input id="consent" type="checkbox" required>
+    <span>I agree to Terms & Conditions</span>
+  </label>
+  
+  <button type="submit">Send Message</button>
+</form>
 
----
+<!-- Good: Icon button with aria-label -->
+<button aria-label="Open navigation menu" class="menu-toggle">
+  <svg aria-hidden="true"><!-- menu icon --></svg>
+</button>
 
-## Component Structure
+<!-- Bad: Non-semantic button -->
+<div class="button" onclick="doSomething()">Click me</div>
+Review & Merge
+Before a PR is merged:
 
-### Service Card Component
+Code review passed (at least one approval)
 
-```html
-<div class="service-card">
-  <h3 class="service-card__title">Service Name</h3>
-  <p class="service-card__description">
-    Brief description of the service.
-  </p>
-  <ul class="service-card__features">
-    <li>Feature 1</li>
-    <li>Feature 2</li>
-  </ul>
-  <a href="#" class="button button--primary">
-    Learn More
-  </a>
-</div>
-```
+Design review passed (brand consistency verified)
 
-### Button Variations
+Mobile testing completed (320px–480px width)
 
-```html
-<!-- Primary -->
-<button class="button button--primary">Click Me</button>
+Desktop testing completed (1920px+ width)
 
-<!-- Secondary -->
-<button class="button button--secondary">Alternative</button>
+Performance verified (no significant slowdown)
 
-<!-- Full Width (Mobile) -->
-<button class="button button--block">Full Width</button>
-```
+Accessibility verified (keyboard navigation, color contrast)
 
-### Hero Section
+Language toggle works on new pages/components
 
-```html
-<section class="hero">
-  <div class="container">
-    <h1 class="hero__title">Main Heading</h1>
-    <p class="hero__subtitle">Subheading description</p>
-    <div class="hero__cta">
-      <a href="#" class="button button--primary">Primary CTA</a>
-      <a href="#" class="button button--secondary">Secondary CTA</a>
-    </div>
-  </div>
-</section>
-```
+Online status logic preserved and tested
 
----
+Questions?
+For questions about development standards, contact:
 
-## Testing Checklist
+Email: letsquickserveit@gmail.com
+WhatsApp: +91 6388224877
 
-### Before Committing
-
-- [ ] All links work (no 404 errors)
-- [ ] Images load correctly
-- [ ] Responsive on 360px, 768px, 1024px widths
-- [ ] No console errors
-- [ ] No horizontal scroll
-- [ ] All text readable
-- [ ] Buttons clickable (44px minimum)
-- [ ] Forms functional
-- [ ] Mobile menu works
-
-### Browser Testing
-
-- [ ] Chrome/Edge (latest)
-- [ ] Firefox (latest)
-- [ ] Safari
-- [ ] Mobile Safari (iOS)
-- [ ] Chrome Mobile (Android)
-
-### Performance
-
-```bash
-# Check Lighthouse scores
-# Chrome DevTools > Lighthouse
-# Target: 85+ Performance, 90+ Accessibility
-```
-
----
-
-## Common Pitfalls
-
-### ✗ Don't Do This
-
-```html
-<!-- Heavy images without optimization -->
-<img src="original-5mb.jpg">
-
-<!-- Multiple fonts -->
-<link href="font1.css">
-<link href="font2.css">
-<link href="font3.css">
-
-<!-- Auto-playing media -->
-<video autoplay>
-
-<!-- Inline styles -->
-<div style="color: red;">Text</div>
-
-<!-- Unnecessary div nesting -->
-<div><div><div><p>Text</p></div></div></div>
-```
-
-### ✓ Do This Instead
-
-```html
-<!-- Optimized WebP images -->
-<img src="optimized.webp" loading="lazy">
-
-<!-- One primary font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700">
-
-<!-- Static content, no autoplay -->
-<img src="preview.webp" alt="Video preview">
-
-<!-- External CSS only -->
-<link rel="stylesheet" href="/assets/css/style.css">
-
-<!-- Semantic, clean structure -->
-<article>
-  <h2>Title</h2>
-  <p>Text</p>
-</article>
-```
-
----
-
-## Commit Message Format
-
-```bash
-# Good commit messages
-git commit -m "docs: Add development guide"
-git commit -m "feat: Create service card component"
-git commit -m "fix: Mobile menu toggle issue"
-git commit -m "perf: Optimize hero image size"
-
-# Format: [type]: [description]
-# Types: docs, feat, fix, perf, style, refactor
-```
-
----
-
-## Additional Resources
-
-- [HTML Best Practices](https://htmlcheatsheet.com/)
-- [CSS Grid Guide](https://cssgridgarden.com/)
-- [Web Accessibility](https://www.w3.org/WAI/)
-- [Performance Tips](https://web.dev/performance/)
-
----
-
-**Last Updated:** December 2025
-
-**Questions?** Open an issue on GitHub or contact Vinod Kumar
+Last Updated: December 5, 2025
