@@ -1,1 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Institute Services by QuickServe IT — Exam papers, timetables, certificates, and school data management.">
+  <meta name="theme-color" content="#0B0B0B">
+  <title>Institute Services — QuickServe IT</title>
+  
+  <link rel="icon" type="image/png" href="/src/assets/img/logo.png">
+  <link rel="stylesheet" href="/src/styles/variables.css">
+  <link rel="stylesheet" href="/src/styles/style.css">
+</head>
+<body>
+  
+  <!-- Navigation Bar -->
+  <header id="navbar" class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <a href="/src/pages/index.html" class="logo-link">
+          <img src="/src/assets/img/logo.png" alt="QuickServe IT Logo" class="logo-image">
+          <span class="logo-text">QuickServe IT</span>
+        </a>
+      </div>
+
+      <nav class="navbar-menu desktop-only">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/src/pages/index.html" class="nav-link" data-en="Home" data-hi="होम">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/pages/services/index.html" class="nav-link" data-en="Services" data-hi="सेवाएं">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/pages/about.html" class="nav-link" data-en="About" data-hi="हमारे बारे में">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/pages/contact.html" class="nav-link" data-en="Contact" data-hi="संपर्क">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions">
+        <div class="status-chip" id="statusChip">
+          <span class="status-indicator"></span>
+          <span class="status-text" id="statusText">Online</span>
+        </div>
+
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-current">हिंदी</span>
+        </button>
+
+        <a href="/src/pages/contact.html" class="btn-cta desktop-only" data-en="Get Started" data-hi="शुरू करें">Get Started</a>
+
+        <button class="hamburger mobile-only" id="hamburger" aria-label="Toggle menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-menu mobile-only" id="mobileMenu">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a href="/src/pages/index.html" class="mobile-nav-link" data-en="Home" data-hi="होम">Home</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="/src/pages/services/index.html" class="mobile-nav-link" data-en="Services" data-hi="सेवाएं">Services</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="/src/pages/about.html" class="mobile-nav-link" data-en="About" data-hi="हमारे बारे में">About</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="/src/pages/contact.html" class="mobile-nav-link" data-en="Contact" data-hi="संपर्क">Contact</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="/src/pages/contact.html" class="mobile-nav-cta" data-en="Get Started" data-hi="शुरू करें">Get Started</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="service-hero">
+      <div class="hero-centered">
+        <h1 class="reveal" data-en="Institute Services" data-hi="संस्थान सेवाएं">Institute Services</h1>
+        <p class="hero-subtitle reveal" data-en="Complete digital solutions for schools and educational institutions" data-hi="स्कूलों और शैक्षणिक संस्थानों के लिए पूर्ण डिजिटल समाधान">Complete digital solutions for schools and educational institutions</p>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="section-overview">
+      <div class="container-md">
+        <div class="section-title">
+          <h2 class="reveal" data-en="What We Offer" data-hi="हम क्या प्रदान करते हैं">What We Offer</h2>
+          <p class="section-subtitle reveal" data-en="Professional services designed for educational institutions" data-hi="शैक्षणिक संस्थानों के लिए डिजाइन की गई पेशेवर सेवाएं">Professional services designed for educational institutions</p>
+        </div>
+
+        <div class="overview-text reveal">
+          <p data-en="We understand the unique digital challenges schools face — from managing exam papers to organizing student records. QuickServe IT provides professional solutions that save time, reduce errors, and maintain consistent quality across all your institutional documents." data-hi="हम स्कूलों के सामने आने वाली अद्वितीय डिजिटल चुनौतियों को समझते हैं — परीक्षा पत्रों के प्रबंधन से लेकर छात्र रिकॉर्ड को व्यवस्थित करने तक। QuickServe IT पेशेवर समाधान प्रदान करता है जो समय बचाते हैं।">We understand the unique digital challenges schools face — from managing exam papers to organizing student records. QuickServe IT provides professional solutions that save time, reduce errors, and maintain consistent quality across all your institutional documents.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="section-services">
+      <div class="container">
+        <div class="grid-2">
+          
+          <article class="card reveal">
+            <div class="card-icon">📝</div>
+            <h3 class="card-title" data-en="Exam Papers & Question Banks" data-hi="परीक्षा पत्र और प्रश्न बैंक">Exam Papers & Question Banks</h3>
+            <p class="card-description" data-en="Professionally formatted exam papers that are ready to print and distribute." data-hi="पेशेवर रूप से स्वरूपित परीक्षा पत्र जो प्रिंट और वितरित करने के लिए तैयार हैं।">Professionally formatted exam papers that are ready to print and distribute.</p>
+            <ul class="card-features">
+              <li data-en="Proper spacing and alignment" data-hi="उचित अंतराल और संरेखण">Proper spacing and alignment</li>
+              <li data-en="Header and footer setup" data-hi="शीर्षलेख और पादलेख सेटअप">Header and footer setup</li>
+              <li data-en="Question numbering" data-hi="प्रश्न नंबरिंग">Question numbering</li>
+              <li data-en="Answer sheet coordination" data-hi="उत्तर पत्र समन्वय">Answer sheet coordination</li>
+              <li data-en="Multi-subject support" data-hi="बहु-विषय समर्थन">Multi-subject support</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon">📅</div>
+            <h3 class="card-title" data-en="Timetables & Schedules" data-hi="समय सारणी और अनुसूचियां">Timetables & Schedules</h3>
+            <p class="card-description" data-en="Clear, organized timetables that can be printed and displayed." data-hi="स्पष्ट, संगठित समय सारणी जिसे मुद्रित और प्रदर्शित किया जा सकता है।">Clear, organized timetables that can be printed and displayed.</p>
+            <ul class="card-features">
+              <li data-en="Class-wise timetables" data-hi="कक्षा-वार समय सारणी">Class-wise timetables</li>
+              <li data-en="Teacher-wise schedules" data-hi="शिक्षक-वार अनुसूचियां">Teacher-wise schedules</li>
+              <li data-en="Exam schedules" data-hi="परीक्षा अनुसूचियां">Exam schedules</li>
+              <li data-en="Color-coded formats" data-hi="रंग-कोडित प्रारूप">Color-coded formats</li>
+              <li data-en="Print-ready PDFs" data-hi="प्रिंट-तैयार पीडीएफ">Print-ready PDFs</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon">📋</div>
+            <h3 class="card-title" data-en="Attendance & Marking" data-hi="उपस्थिति और चिह्न">Attendance & Marking</h3>
+            <p class="card-description" data-en="Organized attendance sheets and marking registers for easy tracking." data-hi="आसान ट्रैकिंग के लिए संगठित उपस्थिति पत्र और चिह्न रजिस्टर।">Organized attendance sheets and marking registers for easy tracking.</p>
+            <ul class="card-features">
+              <li data-en="Daily attendance sheets" data-hi="दैनिक उपस्थिति पत्र">Daily attendance sheets</li>
+              <li data-en="Monthly registers" data-hi="मासिक रजिस्टर">Monthly registers</li>
+              <li data-en="Marks entry sheets" data-hi="अंक प्रविष्टि पत्र">Marks entry sheets</li>
+              <li data-en="Result calculation sheets" data-hi="परिणाम गणना पत्र">Result calculation sheets</li>
+              <li data-en="Customizable formats" data-hi="अनुकूलन योग्य प्रारूप">Customizable formats</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon">🏆</div>
+            <h3 class="card-title" data-en="Certificates & Awards" data-hi="प्रमाणपत्र और पुरस्कार">Certificates & Awards</h3>
+            <p class="card-description" data-en="Professional certificate design for achievements and participation." data-hi="उपलब्धियों और भागीदारी के लिए पेशेवर प्रमाणपत्र डिजाइन।">Professional certificate design for achievements and participation.</p>
+            <ul class="card-features">
+              <li data-en="Merit certificates" data-hi="मेरिट प्रमाणपत्र">Merit certificates</li>
+              <li data-en="Participation certificates" data-hi="भागीदारी प्रमाणपत्र">Participation certificates</li>
+              <li data-en="Achievement awards" data-hi="उपलब्धि पुरस्कार">Achievement awards</li>
+              <li data-en="Custom designs" data-hi="कस्टम डिजाइन">Custom designs</li>
+              <li data-en="Bulk printing ready" data-hi="बल्क प्रिंटिंग के लिए तैयार">Bulk printing ready</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon">📊</div>
+            <h3 class="card-title" data-en="Student Record Management" data-hi="छात्र रिकॉर्ड प्रबंधन">Student Record Management</h3>
+            <p class="card-description" data-en="Organized student databases and record documentation." data-hi="संगठित छात्र डेटाबेस और रिकॉर्ड दस्तावेज़।">Organized student databases and record documentation.</p>
+            <ul class="card-features">
+              <li data-en="Student databases" data-hi="छात्र डेटाबेस">Student databases</li>
+              <li data-en="Class records" data-hi="कक्षा रिकॉर्ड">Class records</li>
+              <li data-en="Performance tracking" data-hi="प्रदर्शन ट्रैकिंग">Performance tracking</li>
+              <li data-en="Report cards" data-hi="रिपोर्ट कार्ड">Report cards</li>
+              <li data-en="Data organization" data-hi="डेटा संगठन">Data organization</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon">📢</div>
+            <h3 class="card-title" data-en="Notices & Circulars" data-hi="सूचनाएं और परिपत्र">Notices & Circulars</h3>
+            <p class="card-description" data-en="Professional communication documents for parents and students." data-hi="माता-पिता और छात्रों के लिए पेशेवर संचार दस्तावेज़।">Professional communication documents for parents and students.</p>
+            <ul class="card-features">
+              <li data-en="School notices" data-hi="स्कूल सूचनाएं">School notices</li>
+              <li data-en="Event circulars" data-hi="कार्यक्रम परिपत्र">Event circulars</li>
+              <li data-en="Holiday notifications" data-hi="छुट्टी अधिसूचनाएं">Holiday notifications</li>
+              <li data-en="Formatted templates" data-hi="स्वरूपित टेम्पलेट">Formatted templates</li>
+              <li data-en="Professional layout" data-hi="पेशेवर लेआउट">Professional layout</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="section-benefits">
+      <div class="container-md">
+        <div class="section-title">
+          <h2 class="reveal" data-en="Why Choose Us for Institute Services" data-hi="संस्थान सेवाओं के लिए हमें क्यों चुनें">Why Choose Us for Institute Services</h2>
+        </div>
+
+        <ul class="points-list">
+          <li class="reveal" data-en="Experience with multiple schools and institutions" data-hi="कई स्कूलों और संस्थानों के साथ अनुभव">Experience with multiple schools and institutions</li>
+          <li class="reveal" data-en="Understanding of academic calendar and schedules" data-hi="शैक्षणिक कैलेंडर और अनुसूचियों की समझ">Understanding of academic calendar and schedules</li>
+          <li class="reveal" data-en="Consistent, professional formatting standards" data-hi="सुसंगत, पेशेवर स्वरूपण मानक">Consistent, professional formatting standards</li>
+          <li class="reveal" data-en="Quick turnaround for time-sensitive projects" data-hi="समय-संवेदनशील परियोजनाओं के लिए तेजी से परिणाम">Quick turnaround for time-sensitive projects</li>
+          <li class="reveal" data-en="Bulk document handling expertise" data-hi="बल्क दस्तावेज़ प्रबंधन विशेषज्ञता">Bulk document handling expertise</li>
+          <li class="reveal" data-en="Reliable quality assurance on every project" data-hi="हर परियोजना पर विश्वसनीय गुणवत्ता आश्वासन">Reliable quality assurance on every project</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section-pricing">
+      <div class="container-md">
+        <div class="section-title">
+          <h2 class="reveal" data-en="Transparent Pricing" data-hi="पारदर्शी मूल्य निर्धारण">Transparent Pricing</h2>
+        </div>
+
+        <div class="pricing-cards grid-2">
+          <div class="card reveal">
+            <h3 data-en="Document Preparation" data-hi="दस्तावेज़ तैयारी">Document Preparation</h3>
+            <p style="color: var(--color-accent-bright); font-size: 24px; font-weight: bold; margin: var(--space-4) 0;">₹15–₹50 <span style="font-size: 14px;">per document</span></p>
+            <p data-en="Based on complexity and volume" data-hi="जटिलता और वॉल्यूम के आधार पर">Based on complexity and volume</p>
+          </div>
+
+          <div class="card reveal">
+            <h3 data-en="Printing & Binding" data-hi="मुद्रण और बाइंडिंग">Printing & Binding</h3>
+            <p style="color: var(--color-accent-bright); font-size: 24px; font-weight: bold; margin: var(--space-4) 0;">₹2+ <span style="font-size: 14px;">per page</span></p>
+            <p data-en="Plus binding charges as needed" data-hi="आवश्यकतानुसार बाइंडिंग शुल्क के अलावा">Plus binding charges as needed</p>
+          </div>
+        </div>
+
+        <div class="pricing-note reveal" style="text-align: center; margin-top: var(--space-8); padding: var(--space-5); background: rgba(212, 175, 55, 0.1); border-radius: var(--radius-lg);">
+          <p data-en="Bulk discounts available for large orders. Contact us for custom pricing." data-hi="बड़े ऑर्डर के लिए बल्क डिस्काउंट उपलब्ध। कस्टम मूल्य निर्धारण के लिए हमसे संपर्क करें।">Bulk discounts available for large orders. Contact us for custom pricing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-cta">
+      <div class="container-md">
+        <div class="section-title">
+          <h2 class="reveal" data-en="Ready to Streamline Your Institute's Documents?" data-hi="अपने संस्थान के दस्तावेज़ों को सुव्यवस्थित करने के लिए तैयार?">Ready to Streamline Your Institute's Documents?</h2>
+          <p class="section-subtitle reveal" data-en="Contact us today and let's get started" data-hi="आज ही हमसे संपर्क करें और शुरू करते हैं">Contact us today and let's get started</p>
+        </div>
+
+        <div class="flex flex-center">
+          <a href="/src/pages/contact.html" class="btn-primary reveal" data-en="Request Institute Services" data-hi="संस्थान सेवाएं अनुरोध करें">Request Institute Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-logo-section">
+          <img src="/src/assets/img/logo.png" alt="QuickServe IT" class="footer-logo">
+          <p class="footer-tagline" data-en="Your Personal Tech Partner" data-hi="आपका व्यक्तिगत तकनीकी साथी">Your Personal Tech Partner</p>
+        </div>
+      </div>
+
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4 class="footer-column-title" data-en="Quick Links" data-hi="त्वरित लिंक्स">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/src/pages/index.html" data-en="Home" data-hi="होम">Home</a></li>
+            <li><a href="/src/pages/services/index.html" data-en="Services" data-hi="सेवाएं">Services</a></li>
+            <li><a href="/src/pages/about.html" data-en="About" data-hi="हमारे बारे में">About</a></li>
+            <li><a href="/src/pages/contact.html" data-en="Contact" data-hi="संपर्क">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title" data-en="Services" data-hi="सेवाएं">Services</h4>
+          <ul class="footer-links">
+            <li><a href="/src/pages/services/service-a.html" data-en="Institute Services" data-hi="संस्थान सेवाएं">Institute Services</a></li>
+            <li><a href="/src/pages/services/service-b.html" data-en="Creator Services" data-hi="निर्माता सेवाएं">Creator Services</a></li>
+            <li><a href="/src/pages/services/service-c.html" data-en="Custom Work" data-hi="कस्टम काम">Custom Work</a></li>
+            <li><a href="/src/pages/contact.html" data-en="Request Quote" data-hi="उद्धरण का अनुरोध करें">Request Quote</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title" data-en="Company" data-hi="कंपनी">Company</h4>
+          <ul class="footer-links">
+            <li><a href="/src/pages/about.html" data-en="Our Story" data-hi="हमारी कहानी">Our Story</a></li>
+            <li><a href="/src/pages/contact.html" data-en="Contact Us" data-hi="हमसे संपर्क करें">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title" data-en="Legal" data-hi="कानूनी">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#privacy" data-en="Privacy Policy" data-hi="गोपनीयता नीति">Privacy Policy</a></li>
+            <li><a href="#terms" data-en="Terms & Conditions" data-hi="शर्तें और शर्तें">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-contact">
+        <div class="contact-item">
+          <strong data-en="WhatsApp:" data-hi="व्हाट्सएप्प:">WhatsApp:</strong>
+          <a href="https://wa.me/916388224877" target="_blank" rel="noopener noreferrer">+91 6388224877</a>
+        </div>
+        <div class="contact-item">
+          <strong data-en="Email:" data-hi="ईमेल:">Email:</strong>
+          <a href="mailto:letsquickserveit@gmail.com">letsquickserveit@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <strong data-en="Hours:" data-hi="समय:">Hours:</strong>
+          <span data-en="Mon–Sat: 8 AM–10 PM IST" data-hi="सोमवार–शनि: 8 AM–10 PM IST">Mon–Sat: 8 AM–10 PM IST</span>
+        </div>
+      </div>
+
+      <div class="footer-pricing-notice">
+        <p class="pricing-text" data-en="English typing ₹15/page · Hindi typing ₹20/page · Printing ₹2/page · Urgent delivery +30–50% · 50% advance required" data-hi="अंग्रेजी टाइपिंग ₹15/पृष्ठ · हिंदी टाइपिंग ₹20/पृष्ठ · प्रिंटिंग ₹2/पृष्ठ · तत्काल डिलीवरी +30–50% · 50% अग्रिम आवश्यक">
+          English typing ₹15/page · Hindi typing ₹20/page · Printing ₹2/page · Urgent delivery +30–50% · 50% advance required
+        </p>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://instagram.com/quickserveit" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"></path>
+            ircle cx="17.5" cy="6.5" r="1.5"></circle>
+          </svg>
+        </a>
+        <a href="https://youtube.com/@quickserveit" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+          </svg>
+        </a>
+        <a href="https://wa.me/916388224877" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21.537 4.63a10.5 10.5 0 0 0-14.874 14.874L2 22l2.496-7.663a10.5 10.5 0 0 1 16.041-9.707z"></path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright" data-en="© 2025 QuickServe IT. All Rights Reserved." data-hi="© 2025 QuickServe IT। सर्वाधिकार सुरक्षित।">
+          &copy; 2025 QuickServe IT. All Rights Reserved.
+        </p>
+        <p class="footer-note" data-en="Built with ❤️ for rural India." data-hi="ग्रामीण भारत के लिए ❤️ के साथ बनाया गया।">
+          Built with ❤️ for rural India.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/src/scripts/utils.js" defer></script>
+  <script src="/src/scripts/main.js" defer></script>
+</body>
+</html>
 
