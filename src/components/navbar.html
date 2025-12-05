@@ -1,1 +1,83 @@
+<!-- QuickServe IT — Navigation Bar Component -->
+<!-- Include this in all pages via JavaScript or server-side templating -->
+
+<header id="navbar" class="navbar">
+  <div class="navbar-container">
+    
+    <!-- Logo Section -->
+    <div class="navbar-logo">
+      <a href="/src/pages/index.html" class="logo-link">
+        <img src="/src/assets/img/logo.png" alt="QuickServe IT Logo" class="logo-image">
+        <span class="logo-text" data-en="QuickServe IT" data-hi="QuickServe IT">QuickServe IT</span>
+      </a>
+    </div>
+
+    <!-- Desktop Navigation Menu -->
+    <nav class="navbar-menu desktop-only">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="/src/pages/index.html" class="nav-link" data-en="Home" data-hi="होम">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/src/pages/services/index.html" class="nav-link" data-en="Services" data-hi="सेवाएं">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="/src/pages/about.html" class="nav-link" data-en="About" data-hi="हमारे बारे में">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="/src/pages/contact.html" class="nav-link" data-en="Contact" data-hi="संपर्क">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Right Side Actions -->
+    <div class="navbar-actions">
+      
+      <!-- Status Chip -->
+      <div class="status-chip" id="statusChip">
+        <span class="status-indicator"></span>
+        <span class="status-text" id="statusText" data-en="Online" data-hi="ऑनलाइन">Online</span>
+      </div>
+
+      <!-- Language Toggle -->
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+        <span class="lang-current" data-lang="en">हिंदी</span>
+      </button>
+
+      <!-- CTA Button (Desktop) -->
+      <a href="javascript:void(0);" class="btn-cta desktop-only" id="ctaButton" data-en="Get Started" data-hi="शुरू करें">Get Started</a>
+
+      <!-- Mobile Hamburger Menu -->
+      <button class="hamburger mobile-only" id="hamburger" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <nav class="mobile-menu mobile-only" id="mobileMenu">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="/src/pages/index.html" class="mobile-nav-link" data-en="Home" data-hi="होम">Home</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="/src/pages/services/index.html" class="mobile-nav-link" data-en="Services" data-hi="सेवाएं">Services</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="/src/pages/about.html" class="mobile-nav-link" data-en="About" data-hi="हमारे बारे में">About</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="/src/pages/contact.html" class="mobile-nav-link" data-en="Contact" data-hi="संपर्क">Contact</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="javascript:void(0);" class="mobile-nav-cta" id="mobileCTA" data-en="Get Started" data-hi="शुरू करें">Get Started</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
 
