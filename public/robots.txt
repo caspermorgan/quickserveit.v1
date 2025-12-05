@@ -1,1 +1,16 @@
+# QuickServe IT — robots.txt
+# Allows all search engines to crawl the website
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private directories (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Specify sitemap location
+Sitemap: https://www.quickserveit.online/public/sitemap.xml
+
+# Crawl delay (optional — most engines ignore this, but good practice)
+# Crawl-delay: 1
 
