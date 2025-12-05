@@ -1,1 +1,19 @@
+{
+  "name": "quickserve-it-site",
+  "version": "1.0.0",
+  "description": "QuickServe IT – Premium luxury static web app (EN/HI, mobile-first, WhatsApp contact).",
+  "scripts": {
+    "start": "npx serve .",
+    "preview": "npx serve ."
+  },
+  "keywords": [
+    "quickserve",
+    "static-site",
+    "vanilla-js",
+    "portfolio",
+    "landing-page"
+  ],
+  "author": "QuickServe IT",
+  "license": "MIT"
+}
 
