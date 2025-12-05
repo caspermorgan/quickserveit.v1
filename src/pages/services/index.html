@@ -1,1 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuickServe IT Services — Professional digital solutions for institutes, creators, and custom work.">
+  <meta name="theme-color" content="#0B0B0B">
+  <title>Services — QuickServe IT</title>
+  
+  <link rel="icon" type="image/png" href="/src/assets/img/logo.png">
+  <link rel="stylesheet" href="/src/styles/variables.css">
+  <link rel="stylesheet" href="/src/styles/style.css">
+</head>
+<body>
+  
+  <!-- Navigation Bar -->
+  <header id="navbar" class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <a href="/src/pages/index.html" class="logo-link">
+          <img src="/src/assets/img/logo.png" alt="QuickServe IT Logo" class="logo-image">
+          <span class="logo-text">QuickServe IT</span>
+        </a>
+      </div>
+
+      <nav class="navbar-menu desktop-only">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/src/pages/index.html" class="nav-link" data-en="Home" data-hi="होम">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/pages/services/index.html" class="nav-link" data-en="Services" data-hi="सेवाएं">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/pages/about.html" class="nav-link" data-en="About" data-hi="हमारे बारे में">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/pages/contact.html" class="nav-link" data-en="Contact" data-hi="संपर्क">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions">
+        <div class="status-chip" id="statusChip">
+          <span class="status-indicator"></span>
+          <span class="status-text" id="statusText">Online</span>
+        </div>
+
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-current">हिंदी</span>
+        </button>
+
+        <a href="/src/pages/contact.html" class="btn-cta desktop-only" data-en="Get Started" data-hi="शुरू करें">Get Started</a>
+
+        <button class="hamburger mobile-only" id="hamburger" aria-label="Toggle menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-menu mobile-only" id="mobileMenu">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a href="/src/pages/index.html" class="mobile-nav-link" data-en="Home" data-hi="होम">Home</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="/src/pages/services/index.html" class="mobile-nav-link" data-en="Services" data-hi="सेवाएं">Services</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="/src/pages/about.html" class="mobile-nav-link" data-en="About" data-hi="हमारे बारे में">About</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="/src/pages/contact.html" class="mobile-nav-link" data-en="Contact" data-hi="संपर्क">Contact</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="/src/pages/contact.html" class="mobile-nav-cta" data-en="Get Started" data-hi="शुरू करें">Get Started</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="services-hero">
+      <div class="hero-centered">
+        <h1 class="reveal" data-en="Our Services" data-hi="हमारी सेवाएं">Our Services</h1>
+        <p class="hero-subtitle reveal" data-en="Professional digital solutions tailored to your needs" data-hi="आपकी जरूरतों के अनुसार तैयार किए गए पेशेवर समाधान">Professional digital solutions tailored to your needs</p>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="section-services">
+      <div class="container">
+        <div class="grid-3">
+          
+          <!-- Service A: Institute Services -->
+          <article class="card reveal">
+            <div class="card-icon">🏫</div>
+            <h3 class="card-title" data-en="Institute Services" data-hi="संस्थान सेवाएं">Institute Services</h3>
+            <p class="card-description" data-en="Complete digital solutions designed for schools, colleges, and coaching centers." data-hi="स्कूलों, कॉलेजों और कोचिंग केंद्रों के लिए डिजाइन किए गए पूर्ण डिजिटल समाधान।">Complete digital solutions designed for schools, colleges, and coaching centers.</p>
+            
+            <div class="card-features">
+              <ul>
+                <li data-en="Exam paper formatting" data-hi="परीक्षा पत्र फॉर्मेटिंग">Exam paper formatting</li>
+                <li data-en="Timetable creation" data-hi="समय सारणी निर्माण">Timetable creation</li>
+                <li data-en="Attendance sheets" data-hi="उपस्थिति पत्र">Attendance sheets</li>
+                <li data-en="Certificate design" data-hi="प्रमाणपत्र डिजाइन">Certificate design</li>
+                <li data-en="Student data management" data-hi="छात्र डेटा प्रबंधन">Student data management</li>
+              </ul>
+            </div>
+            
+            <a href="/src/pages/services/service-a.html" class="card-cta" data-en="Learn More" data-hi="अधिक जानें">Learn More</a>
+          </article>
+
+          <!-- Service B: Creator Services -->
+          <article class="card reveal">
+            <div class="card-icon">🎬</div>
+            <h3 class="card-title" data-en="Creator Services" data-hi="निर्माता सेवाएं">Creator Services</h3>
+            <p class="card-description" data-en="Professional content production for YouTube, social media, and educational creators." data-hi="YouTube, सोशल मीडिया और शैक्षणिक निर्माताओं के लिए पेशेवर सामग्री उत्पादन।">Professional content production for YouTube, social media, and educational creators.</p>
+            
+            <div class="card-features">
+              <ul>
+                <li data-en="Video editing" data-hi="वीडियो संपादन">Video editing</li>
+                <li data-en="Script writing" data-hi="स्क्रिप्ट लेखन">Script writing</li>
+                <li data-en="Thumbnail design" data-hi="थंबनेल डिजाइन">Thumbnail design</li>
+                <li data-en="Audio enhancement" data-hi="ऑडियो वृद्धि">Audio enhancement</li>
+                <li data-en="Content optimization" data-hi="सामग्री अनुकूलन">Content optimization</li>
+              </ul>
+            </div>
+            
+            <a href="/src/pages/services/service-b.html" class="card-cta" data-en="Learn More" data-hi="अधिक जानें">Learn More</a>
+          </article>
+
+          <!-- Service C: Custom Work -->
+          <article class="card reveal">
+            <div class="card-icon">🎨</div>
+            <h3 class="card-title" data-en="Custom Work" data-hi="कस्टम काम">Custom Work</h3>
+            <p class="card-description" data-en="Specialized projects and unique digital solutions for businesses and individuals." data-hi="व्यवसायों और व्यक्तियों के लिए विशेष परियोजनाएं और अद्वितीय डिजिटल समाधान।">Specialized projects and unique digital solutions for businesses and individuals.</p>
+            
+            <div class="card-features">
+              <ul>
+                <li data-en="Branding & logo design" data-hi="ब्रांडिंग और लोगो डिजाइन">Branding & logo design</li>
+                <li data-en="Social media graphics" data-hi="सोशल मीडिया ग्राफिक्स">Social media graphics</li>
+                <li data-en="Document design" data-hi="दस्तावेज़ डिजाइन">Document design</li>
+                <li data-en="Bulk printing" data-hi="बल्क प्रिंटिंग">Bulk printing</li>
+                <li data-en="Custom solutions" data-hi="कस्टम समाधान">Custom solutions</li>
+              </ul>
+            </div>
+            
+            <a href="/src/pages/services/service-c.html" class="card-cta" data-en="Learn More" data-hi="अधिक जानें">Learn More</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Details Grid (Expanded) -->
+    <section class="section-details">
+      <div class="container-md">
+        <div class="section-title">
+          <h2 class="reveal" data-en="What We Offer" data-hi="हम क्या प्रदान करते हैं">What We Offer</h2>
+          <p class="section-subtitle reveal" data-en="Complete breakdown of all services and capabilities" data-hi="सभी सेवाओं और क्षमताओं का पूर्ण विवरण">Complete breakdown of all services and capabilities</p>
+        </div>
+
+        <div class="services-detail-grid grid-2">
+          <div class="detail-section reveal">
+            <h3 data-en="📝 Typing & Document Services" data-hi="📝 टाइपिंग और दस्तावेज़ सेवाएं">📝 Typing & Document Services</h3>
+            <ul class="points-list">
+              <li data-en="English and Hindi typing with 99% accuracy" data-hi="99% सटीकता के साथ अंग्रेजी और हिंदी टाइपिंग">English and Hindi typing with 99% accuracy</li>
+              <li data-en="Professional document formatting" data-hi="पेशेवर दस्तावेज़ फॉर्मेटिंग">Professional document formatting</li>
+              <li data-en="PDF cleanup and enhancement" data-hi="पीडीएफ सफाई और वृद्धि">PDF cleanup and enhancement</li>
+              <li data-en="Bulk document processing" data-hi="बल्क दस्तावेज़ प्रसंस्करण">Bulk document processing</li>
+              <li data-en="Quality assurance on every project" data-hi="हर परियोजना पर गुणवत्ता आश्वासन">Quality assurance on every project</li>
+            </ul>
+          </div>
+
+          <div class="detail-section reveal">
+            <h3 data-en="🏫 Institute & Academic Support" data-hi="🏫 संस्थान और शैक्षणिक समर्थन">🏫 Institute & Academic Support</h3>
+            <ul class="points-list">
+              <li data-en="Exam paper and question bank creation" data-hi="परीक्षा पत्र और प्रश्न बैंक निर्माण">Exam paper and question bank creation</li>
+              <li data-en="Timetable and schedule management" data-hi="समय सारणी और अनुसूची प्रबंधन">Timetable and schedule management</li>
+              <li data-en="Student record organization" data-hi="छात्र रिकॉर्ड संगठन">Student record organization</li>
+              <li data-en="Attendance and marking system setup" data-hi="उपस्थिति और चिह्न प्रणाली सेटअप">Attendance and marking system setup</li>
+              <li data-en="Certificate and award design" data-hi="प्रमाणपत्र और पुरस्कार डिजाइन">Certificate and award design</li>
+            </ul>
+          </div>
+
+          <div class="detail-section reveal">
+            <h3 data-en="🎬 Video & Content Production" data-hi="🎬 वीडियो और सामग्री उत्पादन">🎬 Video & Content Production</h3>
+            <ul class="points-list">
+              <li data-en="Professional video editing" data-hi="पेशेवर वीडियो संपादन">Professional video editing</li>
+              <li data-en="Educational content optimization" data-hi="शैक्षणिक सामग्री अनुकूलन">Educational content optimization</li>
+              <li data-en="YouTube thumbnail design" data-hi="YouTube थंबनेल डिजाइन">YouTube thumbnail design</li>
+              <li data-en="Audio cleanup and enhancement" data-hi="ऑडियो सफाई और वृद्धि">Audio cleanup and enhancement</li>
+              <li data-en="Reels and shorts production" data-hi="Reels और shorts उत्पादन">Reels and shorts production</li>
+            </ul>
+          </div>
+
+          <div class="detail-section reveal">
+            <h3 data-en="🎨 Custom & Branding Solutions" data-hi="🎨 कस्टम और ब्रांडिंग समाधान">🎨 Custom & Branding Solutions</h3>
+            <ul class="points-list">
+              <li data-en="Logo and branding kit design" data-hi="लोगो और ब्रांडिंग किट डिजाइन">Logo and branding kit design</li>
+              <li data-en="Social media graphics" data-hi="सोशल मीडिया ग्राफिक्स">Social media graphics</li>
+              <li data-en="Poster and promotional design" data-hi="पोस्टर और प्रचारात्मक डिजाइन">Poster and promotional design</li>
+              <li data-en="Printing and production" data-hi="मुद्रण और उत्पादन">Printing and production</li>
+              <li data-en="Specialized project handling" data-hi="विशेष परियोजना प्रबंधन">Specialized project handling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Notice -->
+    <section class="section-pricing">
+      <div class="container-md">
+        <div class="pricing-notice reveal">
+          <h3 data-en="Simple, Transparent Pricing" data-hi="सरल, पारदर्शी मूल्य निर्धारण">Simple, Transparent Pricing</h3>
+          
+          <div class="pricing-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-5); margin: var(--space-5) 0;">
+            <div style="padding: var(--space-5); background: rgba(212, 175, 55, 0.05); border-radius: var(--radius-lg);">
+              <strong data-en="English Typing" data-hi="अंग्रेजी टाइपिंग">English Typing</strong>
+              <p style="font-size: 24px; color: var(--color-accent-bright); margin: var(--space-2) 0; font-weight: bold;">₹15<span style="font-size: 14px;">/page</span></p>
+            </div>
+            
+            <div style="padding: var(--space-5); background: rgba(212, 175, 55, 0.05); border-radius: var(--radius-lg);">
+              <strong data-en="Hindi Typing" data-hi="हिंदी टाइपिंग">Hindi Typing</strong>
+              <p style="font-size: 24px; color: var(--color-accent-bright); margin: var(--space-2) 0; font-weight: bold;">₹20<span style="font-size: 14px;">/page</span></p>
+            </div>
+            
+            <div style="padding: var(--space-5); background: rgba(212, 175, 55, 0.05); border-radius: var(--radius-lg);">
+              <strong data-en="Printing" data-hi="मुद्रण">Printing</strong>
+              <p style="font-size: 24px; color: var(--color-accent-bright); margin: var(--space-2) 0; font-weight: bold;">₹2<span style="font-size: 14px;">/page</span></p>
+            </div>
+          </div>
+
+          <div style="background: rgba(212, 175, 55, 0.1); padding: var(--space-5); border-radius: var(--radius-lg); margin-top: var(--space-5);">
+            <p style="margin-bottom: var(--space-2);" data-en="Urgent delivery available" data-hi="तत्काल डिलीवरी उपलब्ध"><strong>Urgent delivery available:</strong> +30–50% surcharge</p>
+            <p style="margin-bottom: var(--space-2);" data-en="Payment terms" data-hi="भुगतान की शर्तें"><strong>Payment terms:</strong> 50% advance, 50% before final delivery</p>
+            <p data-en="No hidden charges. Ever." data-hi="कोई छिपी फीस नहीं। कभी नहीं।"><strong>No hidden charges. Ever.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-cta">
+      <div class="container-md">
+        <div class="section-title">
+          <h2 class="reveal" data-en="Ready to Get Started?" data-hi="शुरू करने के लिए तैयार?">Ready to Get Started?</h2>
+          <p class="section-subtitle reveal" data-en="Choose your service and let's begin your project" data-hi="अपनी सेवा चुनें और अपनी परियोजना शुरू करें">Choose your service and let's begin your project</p>
+        </div>
+
+        <div class="flex flex-center">
+          <a href="/src/pages/contact.html" class="btn-primary reveal" data-en="Contact Us Now" data-hi="अभी हमसे संपर्क करें">Contact Us Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-logo-section">
+          <img src="/src/assets/img/logo.png" alt="QuickServe IT" class="footer-logo">
+          <p class="footer-tagline" data-en="Your Personal Tech Partner" data-hi="आपका व्यक्तिगत तकनीकी साथी">Your Personal Tech Partner</p>
+        </div>
+      </div>
+
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4 class="footer-column-title" data-en="Quick Links" data-hi="त्वरित लिंक्स">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/src/pages/index.html" data-en="Home" data-hi="होम">Home</a></li>
+            <li><a href="/src/pages/services/index.html" data-en="Services" data-hi="सेवाएं">Services</a></li>
+            <li><a href="/src/pages/about.html" data-en="About" data-hi="हमारे बारे में">About</a></li>
+            <li><a href="/src/pages/contact.html" data-en="Contact" data-hi="संपर्क">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title" data-en="Services" data-hi="सेवाएं">Services</h4>
+          <ul class="footer-links">
+            <li><a href="/src/pages/services/service-a.html" data-en="Institute Services" data-hi="संस्थान सेवाएं">Institute Services</a></li>
+            <li><a href="/src/pages/services/service-b.html" data-en="Creator Services" data-hi="निर्माता सेवाएं">Creator Services</a></li>
+            <li><a href="/src/pages/services/service-c.html" data-en="Custom Work" data-hi="कस्टम काम">Custom Work</a></li>
+            <li><a href="/src/pages/contact.html" data-en="Request Quote" data-hi="उद्धरण का अनुरोध करें">Request Quote</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title" data-en="Company" data-hi="कंपनी">Company</h4>
+          <ul class="footer-links">
+            <li><a href="/src/pages/about.html" data-en="Our Story" data-hi="हमारी कहानी">Our Story</a></li>
+            <li><a href="/src/pages/contact.html" data-en="Contact Us" data-hi="हमसे संपर्क करें">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title" data-en="Legal" data-hi="कानूनी">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#privacy" data-en="Privacy Policy" data-hi="गोपनीयता नीति">Privacy Policy</a></li>
+            <li><a href="#terms" data-en="Terms & Conditions" data-hi="शर्तें और शर्तें">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-contact">
+        <div class="contact-item">
+          <strong data-en="WhatsApp:" data-hi="व्हाट्सएप्प:">WhatsApp:</strong>
+          <a href="https://wa.me/916388224877" target="_blank" rel="noopener noreferrer">+91 6388224877</a>
+        </div>
+        <div class="contact-item">
+          <strong data-en="Email:" data-hi="ईमेल:">Email:</strong>
+          <a href="mailto:letsquickserveit@gmail.com">letsquickserveit@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <strong data-en="Hours:" data-hi="समय:">Hours:</strong>
+          <span data-en="Mon–Sat: 8 AM–10 PM IST" data-hi="सोमवार–शनि: 8 AM–10 PM IST">Mon–Sat: 8 AM–10 PM IST</span>
+        </div>
+      </div>
+
+      <div class="footer-pricing-notice">
+        <p class="pricing-text" data-en="English typing ₹15/page · Hindi typing ₹20/page · Printing ₹2/page · Urgent delivery +30–50% · 50% advance required" data-hi="अंग्रेजी टाइपिंग ₹15/पृष्ठ · हिंदी टाइपिंग ₹20/पृष्ठ · प्रिंटिंग ₹2/पृष्ठ · तत्काल डिलीवरी +30–50% · 50% अग्रिम आवश्यक">
+          English typing ₹15/page · Hindi typing ₹20/page · Printing ₹2/page · Urgent delivery +30–50% · 50% advance required
+        </p>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://instagram.com/quickserveit" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"></path>
+            ircle cx="17.5" cy="6.5" r="1.5"></circle>
+          </svg>
+        </a>
+        <a href="https://youtube.com/@quickserveit" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+          </svg>
+        </a>
+        <a href="https://wa.me/916388224877" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21.537 4.63a10.5 10.5 0 0 0-14.874 14.874L2 22l2.496-7.663a10.5 10.5 0 0 1 16.041-9.707z"></path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright" data-en="© 2025 QuickServe IT. All Rights Reserved." data-hi="© 2025 QuickServe IT। सर्वाधिकार सुरक्षित।">
+          &copy; 2025 QuickServe IT. All Rights Reserved.
+        </p>
+        <p class="footer-note" data-en="Built with ❤️ for rural India." data-hi="ग्रामीण भारत के लिए ❤️ के साथ बनाया गया।">
+          Built with ❤️ for rural India.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/src/scripts/utils.js" defer></script>
+  <script src="/src/scripts/main.js" defer></script>
+</body>
+</html>
 
