@@ -1,1 +1,11 @@
+[Placeholder: favicon.ico - 16x16 or 32x32 pixel image file]
+
+Note: In production, replace this with an actual .ico file generated from the logo.
+You can generate one using tools like:
+- https://www.favicon-generator.org/
+- https://icoconvert.com/
+
+For now, browsers will gracefully handle a missing favicon and fall back to the site's logo.
+Alternatively, add this to your HTML <head>:
+<link rel="icon" type="image/png" href="/src/assets/img/logo.png">
 
